@@ -3,11 +3,20 @@ name: List
 menu: Components
 ---
 
-import { props, Playground } from "docz";
+import { Props, Playground } from "docz";
 import List from "./List";
 
 ## List
 
+<Props of={List} />
+
+## Basic Usage
+
 <Playground>
-  <List />
+  <List
+    date="10.07.2019"
+    amount=" - 12,50"
+    description="Edeka"
+    tag="Lebensmittel"
+  />
 </Playground>
