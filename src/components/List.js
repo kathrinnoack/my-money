@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import GlobalStyles from "../app/GlobalStyles";
 
 const StyledList = styled.div`
   background-color: #fffcf2;
