@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const StyledList = styled.div`
   display: flex;
@@ -21,7 +22,9 @@ const StyledListHead = styled.div`
 
 const StyledDate = styled.div``;
 
-const StyledAmount = styled.div``;
+const StyledAmount = styled.div`
+  color: ${props => (Number(props.amount) > 0 ? "#037B49" : "#DB4141")};
+`;
 
 const StyledDescription = styled.p``;
 
@@ -33,13 +36,16 @@ const StyledTag = styled.button`
 `;
 
 function List({ date, amount, description, tag }) {
+  console.log(typeof Number(amount));
   return (
     <>
       <StyledList>
         <>
           <StyledListHead>
             <StyledDate>{date}</StyledDate>
-            <StyledAmount>{amount}</StyledAmount>
+            <StyledAmount amount={amount}>
+              {amount.replace(".", ",")}
+            </StyledAmount>
           </StyledListHead>
           <StyledDescription>
             {description}
@@ -50,5 +56,10 @@ function List({ date, amount, description, tag }) {
     </>
   );
 }
+
+List.propTypes = {
+  description: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired
+};
 
 export default List;
