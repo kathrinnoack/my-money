@@ -2,22 +2,29 @@
   {
     "type": "expense",
     "date": "15.07.2019",
-    "descriptipon": "Edeka",
+    "description": "Edeka",
     "amount": "-12.50",
     "tag": "Lebensmittel"
   },
   {
     "type": "income",
     "date": "01.07.2019",
-    "descriptipon": "Urlaubsgeld",
+    "description": "Urlaubsgeld",
     "amount": "+1000",
     "tag": "Einzahlung"
   },
   {
     "type": "expense",
     "date": "25.07.2019",
-    "descriptipon": "Eintritt Freibad",
+    "description": "Eintritt Freibad",
     "amount": "-4.5",
     "tag": "Sport"
+  },
+  {
+    "type": "income",
+    "date": "25.06.2019",
+    "description": "Gehalt",
+    "amount": "+1800",
+    "tag": "Gehalt"
   }
 ]

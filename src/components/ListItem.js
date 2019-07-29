@@ -36,16 +36,13 @@ const StyledTag = styled.button`
 `;
 
 function ListItem({ date, amount, description, tag }) {
-  console.log(typeof Number(amount));
   return (
     <>
       <StyledList>
         <>
           <StyledListHead>
             <StyledDate>{date}</StyledDate>
-            <StyledAmount amount={amount}>
-              {amount.replace(".", ",")}
-            </StyledAmount>
+            <StyledAmount amount={amount}>{amount}</StyledAmount>
           </StyledListHead>
           <StyledDescription>
             {description}

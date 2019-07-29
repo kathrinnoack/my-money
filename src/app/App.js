@@ -1,13 +1,12 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
-import ListItem from "../components/ListItem";
+import List from "../pages/List";
 
 function App() {
   return (
     <div>
       <GlobalStyles />
-      <ListItem amount="-1" />
-      <ListItem amount="1" />
+      <List />
     </div>
   );
 }
