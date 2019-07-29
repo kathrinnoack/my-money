@@ -8,7 +8,7 @@ const StyledList = styled.div`
   background-color: #fffcf2;
   color: #4b5454;
   border: #4b5454 solid 2px;
-  font-size: 15px;
+  font-size: 20px;
   border-radius: 25px;
   margin: 10px;
   padding: 10px 15px 10px 15px;
@@ -31,6 +31,7 @@ const StyledDescription = styled.p``;
 const StyledTag = styled.button`
   background-color: #4b5454;
   color: #fffcf2;
+  font-size: 20px;
   border-radius: 25px;
   margin-left: 5px;
 `;
