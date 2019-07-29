@@ -35,7 +35,7 @@ const StyledTag = styled.button`
   margin-left: 5px;
 `;
 
-function List({ date, amount, description, tag }) {
+function ListItem({ date, amount, description, tag }) {
   console.log(typeof Number(amount));
   return (
     <>
@@ -57,9 +57,9 @@ function List({ date, amount, description, tag }) {
   );
 }
 
-List.propTypes = {
+ListItem.propTypes = {
   description: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired
 };
 
-export default List;
+export default ListItem;
