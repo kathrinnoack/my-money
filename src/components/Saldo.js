@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import CalculateSaldo from "./CalculateSaldo";
+import Dinero from "dinero.js";
+Dinero.defaultCurrency = "EUR";
 
 const StyledSaldo = styled.div`
   display: flex;
@@ -16,16 +19,11 @@ const StyledSaldoTitle = styled.p`
   flex-direction: flex-start;
 `;
 
-const StyledSaldoAmount = styled.p`
-  display: flex;
-  flex-direction: flex-end;
-`;
-
 function Saldo() {
   return (
     <StyledSaldo>
       <StyledSaldoTitle>Saldo</StyledSaldoTitle>
-      <StyledSaldoAmount>+123,45</StyledSaldoAmount>
+      <CalculateSaldo />
     </StyledSaldo>
   );
 }

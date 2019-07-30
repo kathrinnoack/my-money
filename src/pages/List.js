@@ -1,7 +1,6 @@
 import React from "react";
 import listData from "./__mock__/list.json";
 import ListItem from "../components/ListItem.js";
-import Header from "../components/Header.js";
 
 function List() {
   const [list, setList] = React.useState(listData);
