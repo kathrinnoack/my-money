@@ -3,6 +3,7 @@ import GlobalStyles from "./GlobalStyles";
 import List from "../pages/List";
 import Header from "../components/Header";
 import Saldo from "../components/Saldo";
+import CalculateSaldo from "../components/CalculateSaldo";
 
 function App({ title }) {
   return (
@@ -11,6 +12,7 @@ function App({ title }) {
       <Header title="My Money" />
       <List />
       <Saldo />
+      <CalculateSaldo />
     </div>
   );
 }

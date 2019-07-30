@@ -5,7 +5,7 @@ import Header from "../components/Header.js";
 
 function List() {
   const [list, setList] = React.useState(listData);
-  console.log(list);
+
   function renderListItem(list) {
     return (
       <ListItem
