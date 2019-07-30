@@ -2,6 +2,7 @@ import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import List from "../pages/List";
 import Header from "../components/Header";
+import Saldo from "../components/Saldo";
 
 function App({ title }) {
   return (
@@ -9,6 +10,7 @@ function App({ title }) {
       <GlobalStyles />
       <Header title="My Money" />
       <List />
+      <Saldo />
     </div>
   );
 }
