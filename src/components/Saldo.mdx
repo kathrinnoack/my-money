@@ -1,0 +1,21 @@
+---
+name: Saldo
+menu: Components
+---
+
+import { Props, Playground } from "docz";
+import Saldo from "./Saldo.js";
+
+import Dinero from "dinero.js";
+Dinero.defaultCurrency = "EUR";
+Dinero.globalLocale = "de-DE";
+
+## Saldo
+
+<Props of={Saldo} />
+
+## Basic Usage
+
+<Playground>
+  <Saldo saldo="Saldo"/>
+</Playground>;
