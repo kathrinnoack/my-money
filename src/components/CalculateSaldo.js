@@ -9,7 +9,7 @@ function CalculateSaldo() {
     .reduce((acc, current) => {
       return acc.add(Dinero({ amount: current }));
     }, Dinero({ amount: 0 }));
-  console.log(total.toFormat("$0.0,00"));
+
   return <p>{total.toFormat("$0,0.00")}</p>;
 }
 

@@ -14,7 +14,7 @@ function App({ title }) {
       <GlobalStyles />
       <Header title="My Money" />
       <List />
-      <Saldo />
+      <Saldo saldo="Saldo" />
     </div>
   );
 }

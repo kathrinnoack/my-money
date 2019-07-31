@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CalculateSaldo from "./CalculateSaldo";
-import Dinero from "dinero.js";
-Dinero.defaultCurrency = "EUR";
+import PropTypes from "prop-types";
 
 const StyledSaldo = styled.div`
   display: flex;
@@ -19,13 +18,17 @@ const StyledSaldoTitle = styled.p`
   flex-direction: flex-start;
 `;
 
-function Saldo() {
+function Saldo({ saldo }) {
   return (
     <StyledSaldo>
-      <StyledSaldoTitle>Saldo</StyledSaldoTitle>
+      <StyledSaldoTitle>{saldo}</StyledSaldoTitle>
       <CalculateSaldo />
     </StyledSaldo>
   );
 }
+
+Saldo.propTypes = {
+  saldo: PropTypes.string.isRequired
+};
 
 export default Saldo;
