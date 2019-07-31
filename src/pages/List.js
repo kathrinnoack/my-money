@@ -22,7 +22,7 @@ function List() {
     <>
       <Header title="My Money" />
       {list.map(item => renderListItem(item))}
-      <Saldo saldo="Saldo" />
+      <Saldo saldoTitle="Saldo" />
     </>
   );
 }

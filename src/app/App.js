@@ -2,8 +2,7 @@ import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import List from "../pages/List";
-import Header from "../components/Header";
-import Saldo from "../components/Saldo";
+
 import LandingPage from "../pages/LandingPage";
 import Dinero from "dinero.js";
 
