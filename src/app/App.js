@@ -1,9 +1,10 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import List from "../pages/List";
 import Header from "../components/Header";
 import Saldo from "../components/Saldo";
-import LandingPage from "../components/LandingPage";
+import LandingPage from "../pages/LandingPage";
 import Dinero from "dinero.js";
 
 Dinero.defaultCurrency = "EUR";
@@ -12,11 +13,13 @@ Dinero.globalLocale = "de-DE";
 function App({ title }) {
   return (
     <div>
-      <GlobalStyles />
-      <Header title="My Money" />
-      <LandingPage />
-      <List />
-      <Saldo saldo="Saldo" />
+      <Router>
+        <GlobalStyles />
+        <Switch>
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/list" exact component={List} />
+        </Switch>
+      </Router>
     </div>
   );
 }
