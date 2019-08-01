@@ -22,6 +22,7 @@ const StyledPlusButton = styled.button`
   border: none;
   width: 80px;
   height: 80px;
+  line-height: 80px;
   border-radius: 50%;
   margin: 10px;
   background-color: #037b49;
