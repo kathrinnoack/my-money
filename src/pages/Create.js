@@ -11,10 +11,12 @@ const Container = styled.form`
 `;
 
 const StyledDate = styled.input`
+  background-color: #fffdf6;
   border: 2px #4b5454 solid;
   font-size: 26px;
   border-radius: 25px;
   margin-bottom: 20px;
+
   ::placeholder {
     font-size: 20px;
     color: #4b5454;
@@ -24,6 +26,7 @@ const StyledDate = styled.input`
 `;
 
 const StyledAmount = styled.input`
+  background-color: #fffdf6;
   border: 2px #4b5454 solid;
   font-size: 26px;
   border-radius: 25px;
@@ -45,14 +48,23 @@ const Button = styled.button`
 `;
 
 const StyledCategory = styled.select`
+  background-color: #fffdf6;
   border: 2px #4b5454 solid;
   font-size: 22px;
   border-radius: 25px;
   margin-bottom: 20px;
+  ::placeholder {
+    font-size: 20px;
+    color: #4b5454;
+    opacity: 0.5;
+    padding-left: 10px;
+  }
 `;
 
 const StyledTextarea = styled.textarea`
+  background-color: #fffdf6;
   border: 2px #4b5454 solid;
+  font-family: sans-serif;
   font-size: 22px;
   border-radius: 25px;
   ::placeholder {
@@ -73,7 +85,7 @@ const StyledSubmitButton = styled.button`
   background-color: #4b5454;
   color: #fffcf2;
   border-radius: 25px;
-  bottom: 80px;
+  bottom: 120px;
 `;
 
 function Create() {
@@ -83,10 +95,9 @@ function Create() {
       <Container>
         <Button>Datum:</Button>
         <StyledDate type="text" placeholder="Datum" />
-
         <Button>Kategorie:</Button>
-        <StyledCategory name="category">
-          <option value="" />
+        <StyledCategory name="category" placeholder="Bitte auswählen">
+          <option value="">Bitte auswählen!</option>
           <option value="Gehalt">Gehalt</option>
           <option value="Bareinzahlung">Bareinzahlung</option>
         </StyledCategory>
