@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledMinusButton = styled.button`
   position: absolute;
-  bottom: 100px;
+  bottom: 80px;
   left: 40px;
   border: none;
   width: 80px;
@@ -17,7 +17,7 @@ const StyledMinusButton = styled.button`
 
 const StyledPlusButton = styled.button`
   position: absolute;
-  bottom: 100px;
+  bottom: 80px;
   right: 40px;
   border: none;
   width: 80px;
