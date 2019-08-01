@@ -11,15 +11,13 @@ Dinero.globalLocale = "de-DE";
 
 function App({ title }) {
   return (
-    <div>
-      <Router>
-        <GlobalStyles />
-        <Switch>
-          <Route path="/" exact component={LandingPage} />
-          <Route path="/list" exact component={List} />
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <GlobalStyles />
+      <Switch>
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/list" exact component={List} />
+      </Switch>
+    </Router>
   );
 }
 

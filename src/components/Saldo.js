@@ -47,6 +47,7 @@ const StyledSaldoTitle = styled.p`
   display: flex;
   flex-direction: flex-start;
   color: ${props => getColor(props.color)};
+  padding-right: 10px;
 `;
 
 function Saldo({ size, background, color }) {
