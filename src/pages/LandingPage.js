@@ -1,33 +1,26 @@
 import React from "react";
+import styled from "styled-components";
 import Header from "../components/Header";
 import Saldo from "../components/Saldo";
-import styled from "styled-components";
+import { PlusButton, MinusButton } from "../components/ActionButton";
 
-const StyledLandingPage = styled.div`
+const Page = styled.div`
+  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-const StyledButton = styled.button`
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  margin: 10px;
+  height: 75vh;
 `;
 
 function LandingPage({ size, background, color }) {
   return (
     <>
       <Header title="My Money" />
-      <StyledLandingPage>
+      <Page>
         <Saldo size="L" background="dark" color="light" />
-        <div>
-          <StyledButton>Add expense</StyledButton>
-          <StyledButton>Add income</StyledButton>
-        </div>
-      </StyledLandingPage>
+      </Page>
+      <MinusButton />
+      <PlusButton />
     </>
   );
 }
