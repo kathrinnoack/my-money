@@ -12,36 +12,38 @@ const StyledMinusButton = styled.button`
   margin: 10px;
   background-color: #db4141;
   color: #fffcf2;
-  font-size: 70px;
+  font-size: 50px;
 `;
 
 const StyledPlusButton = styled.button`
   position: absolute;
   bottom: 80px;
   right: 40px;
-  border: none;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  border-radius: 50%;
   margin: 10px;
   background-color: #037b49;
   color: #fffcf2;
-  font-size: 70px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  font-size: 50px;
 `;
 
-export function MinusButton() {
+export function MinusButton({ className }) {
   return (
     <div>
-      <StyledMinusButton>&#8722;</StyledMinusButton>
+      <StyledMinusButton className={className}>
+        <i class="fas fa-minus" />
+      </StyledMinusButton>
     </div>
   );
 }
 
-export function PlusButton() {
+export function PlusButton({ className }) {
   return (
     <div>
-      <StyledPlusButton>&#43;</StyledPlusButton>
+      <StyledPlusButton className={className}>
+        <i class="fas fa-plus" />
+      </StyledPlusButton>
     </div>
   );
 }
