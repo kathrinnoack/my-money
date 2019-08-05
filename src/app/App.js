@@ -10,7 +10,7 @@ import Dinero from "dinero.js";
 Dinero.defaultCurrency = "EUR";
 Dinero.globalLocale = "de-DE";
 
-function App() {
+function App({ history }) {
   return (
     <Router>
       <GlobalStyles />

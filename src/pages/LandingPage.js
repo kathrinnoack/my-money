@@ -12,15 +12,19 @@ const Page = styled.div`
   height: 75vh;
 `;
 
-function LandingPage({ size, background, color }) {
+function LandingPage({ history }) {
+  function handleCreate() {
+    history.push("/create");
+  }
+  console.log(handleCreate("geklickt"));
   return (
     <>
       <Header title="My Money" />
       <Page>
-        <Saldo size="L" background="dark" color="light" />
+        <Saldo title="Saldo" size="L" background="dark" color="light" />
       </Page>
-      <MinusButton />
-      <PlusButton />
+      <MinusButton onClick={handleCreate} />
+      <PlusButton onClick={handleCreate} />
     </>
   );
 }

@@ -90,8 +90,6 @@ const StyledTextarea = styled.textarea`
 `;
 
 const StyledSubmitButton = styled.button`
-  position: fixed;
-  display: flex;
   justify-content: center;
   align-self: center;
   font-size: 22px;
