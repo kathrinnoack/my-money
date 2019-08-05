@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import Saldo from "../components/Saldo";
 import { PlusButton, MinusButton } from "../components/ActionButton";
+import { Link } from "react-router-dom";
+import { stringLiteralTypeAnnotation } from "@babel/types";
 
 const Page = styled.div`
   position: relative;
@@ -12,19 +14,25 @@ const Page = styled.div`
   height: 75vh;
 `;
 
-function LandingPage({ history }) {
-  function handleCreate() {
-    history.push("/create");
+function LandingPage() {
+  //const [type, setType] = React.useState();
+
+  function handleClick() {
+    console.log("clicked");
   }
-  console.log(handleCreate("geklickt"));
+
   return (
     <>
       <Header title="My Money" />
       <Page>
         <Saldo title="Saldo" size="L" background="dark" color="light" />
       </Page>
-      <MinusButton onClick={handleCreate} />
-      <PlusButton onClick={handleCreate} />
+      <Link to="/create">
+        <MinusButton type="button" onClick={handleClick} value="Ausgabe" />
+      </Link>
+      <Link to="/create">
+        <PlusButton onClick={handleClick} value="Einnahme" />
+      </Link>
     </>
   );
 }

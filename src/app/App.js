@@ -10,14 +10,14 @@ import Dinero from "dinero.js";
 Dinero.defaultCurrency = "EUR";
 Dinero.globalLocale = "de-DE";
 
-function App({ history }) {
+function App() {
   return (
     <Router>
       <GlobalStyles />
       <Switch>
         <Route path="/" exact component={LandingPage} />
-        <Route path="/list" exact component={List} />
-        <Route path="/create" exact component={Create} />
+        <Route path="/list" component={List} />
+        <Route path="/create" component={Create} />
       </Switch>
     </Router>
   );

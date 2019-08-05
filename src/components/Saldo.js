@@ -60,7 +60,7 @@ function Saldo({ size, background, color }) {
 }
 
 Saldo.propTypes = {
-  saldoTitle: PropTypes.string.isRequired,
+  saldoTitle: PropTypes.string,
   size: PropTypes.oneOf(["S", "M", "L"]),
   background: PropTypes.oneOf(["light", "dark"]),
   color: PropTypes.oneOf(["dark", "light"])

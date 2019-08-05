@@ -26,5 +26,12 @@
     "description": "Gehalt",
     "amount": "+1800",
     "tag": "Gehalt"
+  },
+  {
+    "type": "income",
+    "date": "25.06.2019",
+    "description": "Gehalt",
+    "amount": "+1800",
+    "tag": "Gehalt"
   }
 ]
