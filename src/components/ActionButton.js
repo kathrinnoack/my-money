@@ -29,13 +29,13 @@ const StyledPlusButton = styled.button`
   font-size: 50px;
 `;
 
-export function MinusButton({ className, onClick, history }) {
+export function MinusButton({ className, onClick, transactionType }) {
   return (
     <div>
       <StyledMinusButton
         className={className}
         onClick={onClick}
-        value="Ausgabe"
+        transactionType={transactionType}
       >
         <i className="fas fa-minus" />
       </StyledMinusButton>
@@ -43,13 +43,13 @@ export function MinusButton({ className, onClick, history }) {
   );
 }
 
-export function PlusButton({ className, onClick, history }) {
+export function PlusButton({ className, onClick, transactionType }) {
   return (
     <div>
       <StyledPlusButton
         className={className}
         onClick={onClick}
-        value="Einnahme"
+        transactionType={transactionType}
       >
         <i className="fas fa-plus" />
       </StyledPlusButton>

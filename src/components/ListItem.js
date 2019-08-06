@@ -36,7 +36,7 @@ const StyledTag = styled.button`
   margin-left: 5px;
 `;
 
-function ListItem({ date, amount, description, tag }) {
+function ListItem({ date, amount, description, tag, onSubmit }) {
   return (
     <>
       <StyledList>
@@ -56,8 +56,8 @@ function ListItem({ date, amount, description, tag }) {
 }
 
 ListItem.propTypes = {
-  description: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired
+  description: PropTypes.string,
+  tag: PropTypes.string
 };
 
 export default ListItem;

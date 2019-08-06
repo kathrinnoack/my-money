@@ -4,25 +4,24 @@ import ListItem from "../components/ListItem.js";
 import Header from "../components/Header.js";
 import Saldo from "../components/Saldo.js";
 
-function List() {
-  const [list, setList] = React.useState(listData);
-
-  function renderListItem(list) {
+function List({ transactions }) {
+  function renderListItem(transaction) {
     return (
       <ListItem
-        date={list.date}
-        description={list.description}
-        amount={list.amount.replace(".", ",")}
-        tag={list.tag}
+        type={transaction.type}
+        date={transaction.date}
+        description={transaction.description}
+        amount={transaction.amount.replace(".", ",")}
+        category={transaction.tag}
       />
     );
   }
-
+  console.log(transactions);
   return (
     <>
       <Header title="My Money" />
-      {list.map(item => renderListItem(item))}
-      <Saldo saldoTitle="Saldo" />
+      {transactions && transactions.map(item => renderListItem(item))}
+      <Saldo saldoTitle="Saldo" transactions={transactions} />
     </>
   );
 }

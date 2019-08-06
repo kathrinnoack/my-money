@@ -107,14 +107,33 @@ const StyledSubmitButton = styled.button`
   border: none;
 `;
 
-function CreateForm() {
+function CreateForm({ onCreate }) {
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const transaction = {
+      type: form.type.value,
+      date: form.date.value,
+      category: form.category.value,
+      amount: form.amount.value,
+      description: form.description.value
+    };
+    onCreate(transaction);
+    //console.log(transaction);
+  }
+
   return (
     <>
-      <Container>
+      <Container onSubmit={handleSubmit}>
         <Button>Typ:</Button>
-        <StyledType type="text" placeholder="Einnahme oder Ausgabe" />
+        <StyledType
+          name="type"
+          type="text"
+          placeholder="Einnahme oder Ausgabe"
+        />
         <Button>Datum:</Button>
-        <StyledDate type="date" />
+        <StyledDate type="date" name="date" />
         <Button>Kategorie:</Button>
         <StyledCategory name="category" placeholder="Bitte auswählen">
           <option value="">Bitte auswählen!</option>
@@ -122,10 +141,11 @@ function CreateForm() {
           <option value="Bareinzahlung">Bareinzahlung</option>
         </StyledCategory>
         <Button>Betrag:</Button>
-        <StyledAmount type="text" placeholder="Betrag xx,yy" />
+        <StyledAmount name="amount" type="text" placeholder="Betrag xx,yy" />
         <Button>Kommentar:</Button>
         <StyledTextarea
           type="text"
+          name="description"
           placeholder="sonstige Kommentare (z.B. REWE, Freibad Eintritt, etc.)?"
         />
         <StyledSubmitButton type="submit">Hinzufügen</StyledSubmitButton>

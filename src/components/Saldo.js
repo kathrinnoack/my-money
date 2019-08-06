@@ -50,11 +50,11 @@ const StyledSaldoTitle = styled.p`
   padding-right: 10px;
 `;
 
-function Saldo({ size, background, color }) {
+function Saldo({ size, background, color, transactions }) {
   return (
     <StyledSaldo size={size} background={background} color={color}>
       <StyledSaldoTitle color={color}>Saldo</StyledSaldoTitle>
-      <CalculateSaldo />
+      <CalculateSaldo transactions={transactions} />
     </StyledSaldo>
   );
 }
