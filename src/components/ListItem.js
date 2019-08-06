@@ -23,7 +23,7 @@ const StyledListHead = styled.div`
 const StyledDate = styled.div``;
 
 const StyledAmount = styled.div`
-  color: ${props => (Number(props.amount) > 0 ? "#037B49" : "#DB4141")};
+  color: ${props => (Number(props.amount) > 0.0 ? "#037B49" : "#DB4141")};
 `;
 
 const StyledDescription = styled.p``;
@@ -36,7 +36,7 @@ const StyledTag = styled.button`
   margin-left: 5px;
 `;
 
-function ListItem({ date, amount, description, tag }) {
+function ListItem({ date, amount, description, category }) {
   return (
     <>
       <StyledList>
@@ -47,7 +47,7 @@ function ListItem({ date, amount, description, tag }) {
           </StyledListHead>
           <StyledDescription>
             {description}
-            <StyledTag>{tag}</StyledTag>
+            <StyledTag>{category}</StyledTag>
           </StyledDescription>
         </>
       </StyledList>
@@ -56,8 +56,8 @@ function ListItem({ date, amount, description, tag }) {
 }
 
 ListItem.propTypes = {
-  description: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired
+  description: PropTypes.string,
+  tag: PropTypes.string
 };
 
 export default ListItem;

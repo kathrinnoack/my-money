@@ -50,17 +50,17 @@ const StyledSaldoTitle = styled.p`
   padding-right: 10px;
 `;
 
-function Saldo({ size, background, color }) {
+function Saldo({ size, background, color, transactions }) {
   return (
     <StyledSaldo size={size} background={background} color={color}>
       <StyledSaldoTitle color={color}>Saldo</StyledSaldoTitle>
-      <CalculateSaldo />
+      <CalculateSaldo transactions={transactions} />
     </StyledSaldo>
   );
 }
 
 Saldo.propTypes = {
-  saldoTitle: PropTypes.string.isRequired,
+  saldoTitle: PropTypes.string,
   size: PropTypes.oneOf(["S", "M", "L"]),
   background: PropTypes.oneOf(["light", "dark"]),
   color: PropTypes.oneOf(["dark", "light"])

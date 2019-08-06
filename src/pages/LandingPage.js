@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import Saldo from "../components/Saldo";
 import { PlusButton, MinusButton } from "../components/ActionButton";
+import { Link } from "react-router-dom";
 
 const Page = styled.div`
   position: relative;
@@ -12,15 +13,27 @@ const Page = styled.div`
   height: 75vh;
 `;
 
-function LandingPage({ size, background, color }) {
+function LandingPage({ transactions }) {
+  function handleClick() {}
+
   return (
     <>
       <Header title="My Money" />
       <Page>
-        <Saldo size="L" background="dark" color="light" />
+        <Saldo
+          title="Saldo"
+          size="L"
+          background="dark"
+          color="light"
+          transactions={transactions}
+        />
       </Page>
-      <MinusButton />
-      <PlusButton />
+      <Link to="/create">
+        <MinusButton onClick={handleClick} value="Ausgabe" />
+      </Link>
+      <Link to="/create">
+        <PlusButton onClick={handleClick} value="Einnahme" />
+      </Link>
     </>
   );
 }
