@@ -11,9 +11,9 @@ const Container = styled.form`
 
 const StyledType = styled.input`
   background-color: #fffdf6;
-  border: 2px #4b5454 solid;
+  border: 2px rgba(75, 84, 84, 0.6) solid;
   font-size: 22px;
-  border-radius: 25px;
+  border-radius: 10px;
   margin-bottom: 20px;
   padding-left: 15px;
   ::placeholder {
@@ -26,12 +26,12 @@ const StyledType = styled.input`
 
 const StyledDate = styled.input`
   background-color: #fffdf6;
-  border: 2px #4b5454 solid;
+  border: 2px rgba(75, 84, 84, 0.6) solid;
   font-size: 22px;
-  border-radius: 25px;
+  border-radius: 10px;
   margin-bottom: 20px;
   padding-left: 15px;
-  ::value {
+  [type="date"] {
     font-family: sans-serif;
     font-size: 18px;
     color: #4b5454;
@@ -42,9 +42,9 @@ const StyledDate = styled.input`
 
 const StyledAmount = styled.input`
   background-color: #fffdf6;
-  border: 2px #4b5454 solid;
+  border: 2px rgba(75, 84, 84, 0.6) solid;
   font-size: 22px;
-  border-radius: 25px;
+  border-radius: 10px;
   margin-bottom: 20px;
   padding-left: 15px;
   ::placeholder {
@@ -60,16 +60,16 @@ const Button = styled.span`
   font-size: 22px;
   background-color: #4b5454;
   color: #fffcf2;
-  border-radius: 25px;
+  border-radius: 10px;
   margin: 12px 0 12px 0;
   opacity: 0.6;
 `;
 
 const StyledCategory = styled.select`
   background-color: #fffdf6;
-  border: 2px #4b5454 solid;
+  border: 2px rgba(75, 84, 84, 0.6) solid;
   font-size: 22px;
-  border-radius: 25px;
+  border-radius: 10px;
   padding-left: 15px;
   margin-bottom: 20px;
   ::placeholder {
@@ -82,14 +82,14 @@ const StyledCategory = styled.select`
 
 const StyledTextarea = styled.textarea`
   background-color: #fffdf6;
-  border: 2px #4b5454 solid;
+  border: 2px rgba(75, 84, 84, 0.6) solid;
   font-family: sans-serif;
   font-size: 22px;
-  border-radius: 25px;
+  border-radius: 10px;
+  padding-left: 15px;
   margin-bottom: 20px;
   ::placeholder {
     font-size: 18px;
-
     color: #4b5454;
     opacity: 0.5;
     padding-left: 10px;

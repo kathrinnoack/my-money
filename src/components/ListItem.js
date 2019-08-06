@@ -23,7 +23,7 @@ const StyledListHead = styled.div`
 const StyledDate = styled.div``;
 
 const StyledAmount = styled.div`
-  color: ${props => (Number(props.amount) > 0 ? "#037B49" : "#DB4141")};
+  color: ${props => (Number(props.amount) > 0.0 ? "#037B49" : "#DB4141")};
 `;
 
 const StyledDescription = styled.p``;
