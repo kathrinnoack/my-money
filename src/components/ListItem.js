@@ -36,7 +36,7 @@ const StyledTag = styled.button`
   margin-left: 5px;
 `;
 
-function ListItem({ date, amount, description, tag, onSubmit }) {
+function ListItem({ date, amount, description, category }) {
   return (
     <>
       <StyledList>
@@ -47,7 +47,7 @@ function ListItem({ date, amount, description, tag, onSubmit }) {
           </StyledListHead>
           <StyledDescription>
             {description}
-            <StyledTag>{tag}</StyledTag>
+            <StyledTag>{category}</StyledTag>
           </StyledDescription>
         </>
       </StyledList>

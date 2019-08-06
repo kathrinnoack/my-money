@@ -1,5 +1,5 @@
 import React from "react";
-import listData from "./__mock__/list.json";
+
 import ListItem from "../components/ListItem.js";
 import Header from "../components/Header.js";
 import Saldo from "../components/Saldo.js";
@@ -12,7 +12,7 @@ function List({ transactions }) {
         date={transaction.date}
         description={transaction.description}
         amount={transaction.amount.replace(".", ",")}
-        category={transaction.tag}
+        category={transaction.category}
       />
     );
   }

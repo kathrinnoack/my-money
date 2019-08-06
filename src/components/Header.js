@@ -3,6 +3,12 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const StyledHeader = styled.div`
+  .sticky {
+    position: fixed;
+    top: 0,
+    width: 100%
+  }
+
   display: flex;
   flex-direction: row;
   justify-content: center;
