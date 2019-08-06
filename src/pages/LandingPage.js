@@ -14,9 +14,7 @@ const Page = styled.div`
 `;
 
 function LandingPage({ transactions }) {
-  function handleClick() {
-    console.log("clicked");
-  }
+  function handleClick() {}
 
   return (
     <>

@@ -20,7 +20,7 @@ function List({ transactions }) {
         type={transaction.type}
         date={transaction.date}
         description={transaction.description}
-        amount={transaction.amount}
+        amount={transaction.amount.replace(".", ",")}
         category={transaction.category}
       />
     );
