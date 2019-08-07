@@ -8,9 +8,22 @@ import { Link } from "react-router-dom";
 const Page = styled.div`
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 75vh;
+`;
+
+const StyledMinusButton = styled(MinusButton)`
+  position: absolute;
+  left: 30px;
+  bottom: 50px;
+`;
+
+const StyledPlusButton = styled(PlusButton)`
+  position: absolute;
+  right: 30px;
+  bottom: 50px;
 `;
 
 function LandingPage({ transactions }) {
@@ -27,13 +40,15 @@ function LandingPage({ transactions }) {
           color="light"
           transactions={transactions}
         />
+
+        <Link to="/create">
+          <StyledMinusButton onClick={handleClick} value="Ausgabe" />
+        </Link>
+
+        <Link to="/create">
+          <StyledPlusButton onClick={handleClick} value="Einnahme" />
+        </Link>
       </Page>
-      <Link to="/create">
-        <MinusButton onClick={handleClick} value="Ausgabe" />
-      </Link>
-      <Link to="/create">
-        <PlusButton onClick={handleClick} value="Einnahme" />
-      </Link>
     </>
   );
 }

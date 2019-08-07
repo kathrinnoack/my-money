@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import dinero from "dinero.js";
+import Amount from "./Amount";
 
 const Container = styled.form`
   position: relative;
@@ -11,7 +13,7 @@ const Container = styled.form`
 
 const StyledType = styled.input`
   background-color: #fffdf6;
-  border: 2px rgba(75, 84, 84, 0.6) solid;
+  border: 1px rgba(75, 84, 84, 0.6) solid;
   font-size: 22px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -26,39 +28,21 @@ const StyledType = styled.input`
 
 const StyledDate = styled.input`
   background-color: #fffdf6;
-  border: 2px rgba(75, 84, 84, 0.6) solid;
-  font-size: 22px;
+  border: 1px rgba(75, 84, 84, 0.6) solid;
+  font-size: 18px;
   border-radius: 10px;
   margin-bottom: 20px;
   padding-left: 15px;
-  [type="date"] {
-    font-family: sans-serif;
-    font-size: 18px;
-    color: #4b5454;
-    opacity: 0.5;
-    padding-left: 10px;
-  }
-`;
-
-const StyledAmount = styled.input`
-  background-color: #fffdf6;
-  border: 2px rgba(75, 84, 84, 0.6) solid;
-  font-size: 22px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  padding-left: 15px;
-  ::placeholder {
-    font-size: 18px;
-    color: #4b5454;
-    opacity: 0.5;
-    padding-left: 10px;
-  }
+  font-family: sans-serif;
+  color: #4b5454;
+  opacity: 0.5;
 `;
 
 const Button = styled.span`
   padding-left: 15px;
   font-size: 22px;
   background-color: #4b5454;
+  border: none;
   color: #fffcf2;
   border-radius: 10px;
   margin: 12px 0 12px 0;
@@ -67,22 +51,19 @@ const Button = styled.span`
 
 const StyledCategory = styled.select`
   background-color: #fffdf6;
-  border: 2px rgba(75, 84, 84, 0.6) solid;
-  font-size: 22px;
+  border: 1px rgba(75, 84, 84, 0.6) solid;
+  font-size: 18px;
   border-radius: 10px;
   padding-left: 15px;
   margin-bottom: 20px;
-  ::placeholder {
-    font-size: 18px;
-    color: #4b5454;
-    opacity: 0.5;
-    padding-left: 10px;
-  }
+  font-family: sans-serif;
+  color: #4b5454;
+  opacity: 0.5;
 `;
 
 const StyledTextarea = styled.textarea`
   background-color: #fffdf6;
-  border: 2px rgba(75, 84, 84, 0.6) solid;
+  border: 1px rgba(75, 84, 84, 0.6) solid;
   font-family: sans-serif;
   font-size: 22px;
   border-radius: 10px;
@@ -99,6 +80,7 @@ const StyledTextarea = styled.textarea`
 const StyledSubmitButton = styled.button`
   justify-content: center;
   align-self: center;
+
   font-size: 22px;
   width: 150px;
   background-color: #4b5454;
@@ -141,7 +123,7 @@ function CreateForm({ onCreate }) {
           <option value="Bareinzahlung">Bareinzahlung</option>
         </StyledCategory>
         <Button>Betrag:</Button>
-        <StyledAmount name="amount" type="text" placeholder="Betrag xx,yy" />
+        <Amount />
         <Button>Kommentar:</Button>
         <StyledTextarea
           type="text"
