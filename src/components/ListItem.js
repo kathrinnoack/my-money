@@ -43,7 +43,9 @@ function ListItem({ date, amount, description, category }) {
         <>
           <StyledListHead>
             <StyledDate>{date}</StyledDate>
-            <StyledAmount amount={amount}>{amount}</StyledAmount>
+            <StyledAmount amount={amount}>
+              {amount.replace(".", ",")}
+            </StyledAmount>
           </StyledListHead>
           <StyledDescription>
             {description}

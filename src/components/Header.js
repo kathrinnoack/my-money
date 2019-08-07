@@ -12,6 +12,7 @@ const StyledHeader = styled.div`
   align-items: center;
   background-color: #4b5454;
   padding: 5px;
+  z-index: 1;
 `;
 
 const StyledHeadTitle = styled.h1`
