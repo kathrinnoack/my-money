@@ -116,6 +116,13 @@ function CreateForm({ onCreate }) {
     category: ""
   });
 
+  const transactionTypes = ["Ausgabe", "Einnahme"];
+  const selectTypes = ["bitte auswählen", ...transactionTypes];
+
+  function renderTypes(type) {
+    return <option key={type}>{type}</option>;
+  }
+
   function handleChange(event) {
     const { name, value } = event.target;
     setListValues({
@@ -179,9 +186,7 @@ function CreateForm({ onCreate }) {
           error={errors.type}
           onChange={handleChange}
         >
-          <option value="bitte auswählen">Bitte auswählen</option>
-          <option value="Ausgabe">Ausgabe</option>
-          <option value="Einnahme">Einnahme</option>>
+          {selectTypes.map(type => renderTypes(type))}
         </StyledType>
 
         <Button>Datum:</Button>
