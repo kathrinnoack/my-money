@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import InputError from "../components/InputForm";
 
 const Container = styled.form`
   position: relative;
@@ -18,7 +19,6 @@ const StyledType = styled.select`
   padding-left: 15px;
   font-family: sans-serif;
   color: #4b5454;
-  opacity: 0.5;
   :focus {
     font-size: 18px;
     color: #4b5454;
@@ -39,7 +39,7 @@ const StyledDate = styled.input`
 const StyledAmount = styled.input`
   background-color: #fffdf6;
   border: 1px rgba(75, 84, 84, 0.6) solid;
-  font-size: 22px;
+  font-size: 18px;
   border-radius: 10px;
   margin-bottom: 20px;
   padding-left: 15px;
@@ -71,14 +71,13 @@ const StyledCategory = styled.select`
   margin-bottom: 20px;
   font-family: sans-serif;
   color: #4b5454;
-  opacity: 0.5;
 `;
 
 const StyledTextarea = styled.textarea`
   background-color: #fffdf6;
   border: 1px rgba(75, 84, 84, 0.6) solid;
   font-family: sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   border-radius: 10px;
   padding-left: 15px;
   margin-bottom: 20px;
@@ -102,6 +101,7 @@ const StyledSubmitButton = styled.button`
 `;
 
 function CreateForm({ onCreate }) {
+  const [errors, setErrors] = React.useState({});
   const [listValues, setListValues] = React.useState({
     type: "",
     date: "",
@@ -109,8 +109,6 @@ function CreateForm({ onCreate }) {
     amount: "",
     category: ""
   });
-
-  const [errors, setErrors] = React.useState({});
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -152,14 +150,12 @@ function CreateForm({ onCreate }) {
       return;
     }
 
-    const form = event.target;
-
     const transaction = {
-      type: form.type.value,
-      date: form.date.value,
-      category: form.category.value,
-      amount: form.amount.value,
-      description: form.description.value
+      type: listValues.type,
+      date: listValues.date,
+      category: listValues.category,
+      amount: listValues.amount,
+      description: listValues.description
     };
 
     onCreate(transaction);
@@ -172,36 +168,46 @@ function CreateForm({ onCreate }) {
         <Button>Typ:</Button>
         <StyledType
           name="type"
-          onChange={handleChange}
-          value={listValues}
+          value={listValues.type}
           error={errors.type}
+          onChange={handleChange}
         >
+          <option value="">Bitte auswählen</option>
           <option value="Ausgabe">Ausgabe</option>
           <option value="Einnahme">Einnahme</option>
+          <InputError />
         </StyledType>
         <Button>Datum:</Button>
-        <StyledDate type="date" name="date" onChange={handleChange} />
+        <StyledDate
+          type="date"
+          name="date"
+          onChange={handleChange}
+          value={listValues.date}
+          error={errors.date}
+        />
         <Button>Kategorie:</Button>
         <StyledCategory
           name="category"
           placeholder="Bitte auswählen"
-          required
           onChange={handleChange}
+          value={listValues.category}
+          error={errors.category}
         >
           <option value="">Bitte auswählen!</option>
           <option value="Gehalt">Gehalt</option>
           <option value="Bareinzahlung">Bareinzahlung</option>
           <option value="Lebensmittel">Lebensmittel</option>
-          <option value="Lebensmittel">Kleidung</option>
+          <option value="Kleidung">Kleidung</option>
         </StyledCategory>
         <Button>Betrag:</Button>
         <StyledAmount
           name="amount"
-          required
           type="number"
           step="0.01"
           placeholder="Betrag xx,yy"
           onChange={handleChange}
+          value={listValues.amount}
+          error={errors.amount}
         />
 
         <Button>Kommentar:</Button>

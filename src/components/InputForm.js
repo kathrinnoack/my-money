@@ -12,7 +12,7 @@ const StyledInput = styled.input`
 
 const Error = styled.div`
   color: #db4141;
-  background: rgba(255, 0, 0, 0.4);
+  font-size: 22px;
 `;
 
 function InputError({ error, className, ...props }) {
