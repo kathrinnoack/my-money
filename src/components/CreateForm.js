@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import InputError from "../components/InputForm";
 
 const Container = styled.form`
   position: relative;
@@ -100,6 +99,15 @@ const StyledSubmitButton = styled.button`
   border: none;
 `;
 
+const StyledError = styled.span`
+  font-size: 22px;
+  font-weight: bold;
+  color: #db4141;
+  width: 100%;
+  padding-left: 15px;
+  margin-bottom: 10px;
+`;
+
 function CreateForm({ onCreate }) {
   const [errors, setErrors] = React.useState({});
   const [listValues, setListValues] = React.useState({
@@ -166,17 +174,18 @@ function CreateForm({ onCreate }) {
     <>
       <Container onSubmit={handleSubmit}>
         <Button>Typ:</Button>
+        {errors.type && <StyledError>{errors.type}</StyledError>}
         <StyledType
           name="type"
           value={listValues.type}
           error={errors.type}
           onChange={handleChange}
         >
-          <option value="">Bitte auswählen</option>
+          <option value="bitte auswählen">Bitte auswählen</option>
           <option value="Ausgabe">Ausgabe</option>
-          <option value="Einnahme">Einnahme</option>
-          <InputError />
+          <option value="Einnahme">Einnahme</option>>
         </StyledType>
+
         <Button>Datum:</Button>
         <StyledDate
           type="date"
@@ -186,6 +195,7 @@ function CreateForm({ onCreate }) {
           error={errors.date}
         />
         <Button>Kategorie:</Button>
+        {errors.category && <StyledError>{errors.category}</StyledError>}
         <StyledCategory
           name="category"
           placeholder="Bitte auswählen"
@@ -200,6 +210,7 @@ function CreateForm({ onCreate }) {
           <option value="Kleidung">Kleidung</option>
         </StyledCategory>
         <Button>Betrag:</Button>
+        {errors.amount && <StyledError>{errors.amount}</StyledError>}
         <StyledAmount
           name="amount"
           type="number"
