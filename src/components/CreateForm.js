@@ -225,6 +225,8 @@ function CreateForm({ onCreate, minusType, plusType }) {
           type="text"
           name="description"
           placeholder="sonstige Kommentare (z.B. REWE, Freibad Eintritt, etc.)?"
+          onChange={handleChange}
+          value={listValues.description}
         />
         <StyledSubmitButton type="submit">Hinzufügen</StyledSubmitButton>
       </Container>
