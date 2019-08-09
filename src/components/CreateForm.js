@@ -9,17 +9,17 @@ const Container = styled.form`
   font-size: 26px;
 `;
 
-const StyledType = styled.select`
+const StyledType = styled.input`
   background-color: #fffdf6;
   border: 1px rgba(75, 84, 84, 0.6) solid;
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 20px;
   padding-left: 10px;
   font-family: sans-serif;
   color: #4b5454;
-  :focus {
+  ::placeholder {
     font-size: 18px;
-    color: #4b5454;
+    color: rgba(75, 84, 84, 0.6);
     padding-left: 10px;
   }
 `;
@@ -100,13 +100,16 @@ const StyledSubmitButton = styled.button`
 const StyledError = styled.span`
   font-size: 22px;
   font-weight: bold;
-  color: #db4141;
+  background-color: rgba(219, 65, 65, 0.5);
+  color: rgba(219, 65, 65);
   width: 100%;
   padding-left: 10px;
   margin: 0;
 `;
 
-function CreateForm({ onCreate }) {
+function CreateForm({ onCreate, minusType, plusType }) {
+  console.log(minusType, plusType);
+
   const [errors, setErrors] = React.useState({});
   const [listValues, setListValues] = React.useState({
     type: "",
@@ -126,10 +129,6 @@ function CreateForm({ onCreate }) {
 
   function validate() {
     const errors = {};
-
-    if (listValues.type.trim() === "") {
-      errors.type = "Bitte auswählen";
-    }
 
     if (listValues.date.trim() === "") {
       errors.date = "Bitte Datum auswählen";
@@ -174,15 +173,13 @@ function CreateForm({ onCreate }) {
         <Button>Typ:</Button>
         {errors.type && <StyledError>{errors.type}</StyledError>}
         <StyledType
+          type="text"
           name="type"
-          value={listValues.type}
+          placeholder="Einnahme oder Ausgabe"
+          value={minusType || plusType}
           error={errors.type}
           onChange={handleChange}
-        >
-          <option value="bitte auswählen">Bitte auswählen</option>
-          <option value="Ausgabe">Ausgabe</option>
-          <option value="Einnahme">Einnahme</option>>
-        </StyledType>
+        />
 
         <Button>Datum:</Button>
         <StyledDate
@@ -195,6 +192,7 @@ function CreateForm({ onCreate }) {
         <Button>Kategorie:</Button>
         {errors.category && <StyledError>{errors.category}</StyledError>}
         <StyledCategory
+          type="select"
           name="category"
           placeholder="Bitte auswählen"
           onChange={handleChange}
@@ -214,6 +212,8 @@ function CreateForm({ onCreate }) {
           name="amount"
           type="number"
           step="0.01"
+          min="-99999"
+          max="99999"
           placeholder="Betrag xx,yy"
           onChange={handleChange}
           value={listValues.amount}
@@ -225,6 +225,8 @@ function CreateForm({ onCreate }) {
           type="text"
           name="description"
           placeholder="sonstige Kommentare (z.B. REWE, Freibad Eintritt, etc.)?"
+          onChange={handleChange}
+          value={listValues.description}
         />
         <StyledSubmitButton type="submit">Hinzufügen</StyledSubmitButton>
       </Container>

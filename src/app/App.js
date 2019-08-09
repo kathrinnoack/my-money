@@ -13,17 +13,13 @@ Dinero.globalLocale = "de-DE";
 
 function App() {
   const [transactions, setTransactions] = React.useState(listData);
-
-  //function handleOnClicked(transactionType) {
-  //setTransactionType(transactionType);
+  const [minusType, setMinusType] = React.useState("");
+  const [plusType, setPlusType] = React.useState("");
 
   function handleCreate(transaction) {
     const newTrans = transaction;
     console.log(transaction);
-
-    //console.log(newTrans);
     setTransactions([newTrans, ...transactions]);
-    // console.log(setTransactions);
   }
 
   return (
@@ -34,18 +30,36 @@ function App() {
           path="/"
           exact
           render={props => (
-            <LandingPage {...props} transactions={transactions} />
+            <LandingPage
+              setMinusType={setMinusType}
+              setPlusType={setPlusType}
+              {...props}
+              transactions={transactions}
+            />
           )}
-          // onClicked={handleOnClicked}
         />
         <Route
           path="/list"
-          render={props => <List {...props} transactions={transactions} />}
+          render={props => (
+            <List
+              {...props}
+              transactions={transactions}
+              setMinusType={setMinusType}
+              setPlusType={setPlusType}
+            />
+          )}
         />
         } />
         <Route
           path="/create"
-          render={props => <Create {...props} onCreate={handleCreate} />}
+          render={props => (
+            <Create
+              minusType={minusType}
+              plusType={plusType}
+              {...props}
+              onCreate={handleCreate}
+            />
+          )}
         />
       </Switch>
     </Router>

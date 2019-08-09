@@ -26,9 +26,16 @@ const StyledPlusButton = styled(PlusButton)`
   bottom: 50px;
 `;
 
-function LandingPage({ transactions }) {
-  function handleClick() {}
-
+function LandingPage({
+  transactions,
+  transactionType,
+  setMinusType,
+  setPlusType
+}) {
+  function handleClick(minusType, plusType) {
+    setMinusType(minusType);
+    setPlusType(plusType);
+  }
   return (
     <>
       <Header title="My Money" />
@@ -42,11 +49,14 @@ function LandingPage({ transactions }) {
         />
 
         <Link to="/create">
-          <StyledMinusButton onClick={handleClick} value="Ausgabe" />
+          <StyledMinusButton
+            transactionType={transactionType}
+            onClick={() => handleClick("Ausgabe")}
+          />
         </Link>
 
         <Link to="/create">
-          <StyledPlusButton onClick={handleClick} value="Einnahme" />
+          <StyledPlusButton onClick={() => handleClick("Einnahme")} />
         </Link>
       </Page>
     </>
