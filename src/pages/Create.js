@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import CreateForm from "../components/CreateForm";
 
-function Create({ onCreate, history }) {
+function Create({ plusType, minusType, onCreate, history }) {
   function handleCreate(transaction) {
     onCreate(transaction);
     history.push("/list");
@@ -11,7 +11,11 @@ function Create({ onCreate, history }) {
   return (
     <>
       <Header title="My Money" />
-      <CreateForm onCreate={handleCreate} />
+      <CreateForm
+        minusType={minusType}
+        plusType={plusType}
+        onCreate={handleCreate}
+      />
     </>
   );
 }
