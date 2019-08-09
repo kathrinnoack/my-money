@@ -46,19 +46,14 @@ const StyledPlusButton = styled.button`
   font-size: ${props => getSize(props.buttonSize).fontSize};
 `;
 
-export function MinusButton({
-  className,
-  onClick,
-  transactionType,
-  buttonSize
-}) {
+export function MinusButton({ className, buttonSize, onClick, ...props }) {
   return (
     <div>
       <StyledMinusButton
         className={className}
         onClick={onClick}
-        transactionType={transactionType}
         buttonSize={buttonSize}
+        {...props}
       >
         <i className="fas fa-minus" />
       </StyledMinusButton>
@@ -66,19 +61,14 @@ export function MinusButton({
   );
 }
 
-export function PlusButton({
-  className,
-  onClick,
-  transactionType,
-  buttonSize
-}) {
+export function PlusButton({ className, buttonSize, onClick, ...props }) {
   return (
     <div>
       <StyledPlusButton
         className={className}
-        onClick={onClick}
-        transactionType={transactionType}
         buttonSize={buttonSize}
+        onClick={onClick}
+        {...props}
       >
         <i className="fas fa-plus" />
       </StyledPlusButton>
