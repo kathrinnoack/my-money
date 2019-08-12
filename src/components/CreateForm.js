@@ -12,15 +12,16 @@ const Container = styled.form`
 const StyledType = styled.input`
   background-color: #fffdf6;
   border: 1px rgba(75, 84, 84, 0.6) solid;
+  border-radius: 5px;
   font-size: 22px;
   margin-bottom: 20px;
-  padding-left: 10px;
+  padding: 5px 5px 5px 10px;
   font-family: sans-serif;
   color: #4b5454;
   ::placeholder {
     font-size: 18px;
     color: rgba(75, 84, 84, 0.6);
-    padding-left: 10px;
+    padding: 5px 5px 5px 10px;
   }
 `;
 
@@ -30,7 +31,7 @@ const StyledDate = styled.input`
   font-size: 18px;
   border-radius: 5px;
   margin-bottom: 20px;
-  padding-left: 10px;
+  padding: 5px 5px 5px 10px;
   font-family: sans-serif;
   color: #4b5454;
 `;
@@ -40,17 +41,17 @@ const StyledAmount = styled.input`
   font-size: 18px;
   border-radius: 5px;
   margin-bottom: 20px;
-  padding-left: 10px;
+  padding: 5px 5px 5px 10px;
   ::placeholder {
     font-size: 18px;
     color: #4b5454;
     opacity: 0.5;
-    padding-left: 10px;
+    padding: 5px 5px 5px 10px;
   }
 `;
 
-const Button = styled.span`
-  padding-left: 10px;
+const InputTitle = styled.span`
+  padding: 5px 5px 5px 10px;
   font-size: 22px;
   background-color: #4b5454;
   border: none;
@@ -64,7 +65,7 @@ const StyledCategory = styled.select`
   background-color: #fffdf6;
   border: 1px rgba(75, 84, 84, 0.6) solid;
   font-size: 18px;
-  padding-left: 10px;
+  padding: 5px 5px 5px 10px;
   margin-bottom: 20px;
   font-family: sans-serif;
   color: #4b5454;
@@ -76,7 +77,7 @@ const StyledTextarea = styled.textarea`
   font-family: sans-serif;
   font-size: 18px;
   border-radius: 5px;
-  padding-left: 10px;
+  padding: 5px 5px 5px 10px;
   margin-bottom: 20px;
   ::placeholder {
     font-size: 18px;
@@ -91,6 +92,7 @@ const StyledSubmitButton = styled.button`
   align-self: center;
   font-size: 22px;
   width: 150px;
+  padding: 5px;
   background-color: #4b5454;
   color: #fffcf2;
   border-radius: 25px;
@@ -108,8 +110,6 @@ const StyledError = styled.span`
 `;
 
 function CreateForm({ onCreate, minusType, plusType }) {
-  console.log(minusType, plusType);
-
   const [errors, setErrors] = React.useState({});
   const [listValues, setListValues] = React.useState({
     type: "",
@@ -170,7 +170,7 @@ function CreateForm({ onCreate, minusType, plusType }) {
   return (
     <>
       <Container onSubmit={handleSubmit}>
-        <Button>Typ:</Button>
+        <InputTitle>Typ:</InputTitle>
         {errors.type && <StyledError>{errors.type}</StyledError>}
         <StyledType
           type="text"
@@ -181,7 +181,8 @@ function CreateForm({ onCreate, minusType, plusType }) {
           onChange={handleChange}
         />
 
-        <Button>Datum:</Button>
+        <InputTitle>Datum:</InputTitle>
+        {errors.date && <StyledError>{errors.date}</StyledError>}
         <StyledDate
           type="date"
           name="date"
@@ -189,7 +190,7 @@ function CreateForm({ onCreate, minusType, plusType }) {
           value={listValues.date}
           error={errors.date}
         />
-        <Button>Kategorie:</Button>
+        <InputTitle>Kategorie:</InputTitle>
         {errors.category && <StyledError>{errors.category}</StyledError>}
         <StyledCategory
           type="select"
@@ -206,7 +207,7 @@ function CreateForm({ onCreate, minusType, plusType }) {
           <option value="Kleidung">Kleidung</option>
         </StyledCategory>
 
-        <Button>Betrag:</Button>
+        <InputTitle>Betrag:</InputTitle>
         {errors.amount && <StyledError>{errors.amount}</StyledError>}
         <StyledAmount
           name="amount"
@@ -220,7 +221,7 @@ function CreateForm({ onCreate, minusType, plusType }) {
           error={errors.amount}
         />
 
-        <Button>Kommentar:</Button>
+        <InputTitle>Kommentar:</InputTitle>
         <StyledTextarea
           type="text"
           name="description"

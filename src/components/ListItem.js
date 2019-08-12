@@ -34,6 +34,7 @@ const StyledTag = styled.button`
   font-size: 20px;
   border-radius: 25px;
   margin-left: 5px;
+  border: none;
 `;
 
 function ListItem({ date, amount, description, category }) {
@@ -45,6 +46,7 @@ function ListItem({ date, amount, description, category }) {
             <StyledDate>{date}</StyledDate>
             <StyledAmount amount={amount}>
               {amount.replace(".", ",")}
+              {" €"}
             </StyledAmount>
           </StyledListHead>
           <StyledDescription>
