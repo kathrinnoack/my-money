@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import DropdownCategory from "./DropdownCategory";
 
 const Container = styled.form`
   position: relative;
@@ -59,16 +60,6 @@ const InputTitle = styled.span`
   border-radius: 5px;
   margin: 12px 0 12px 0;
   opacity: 0.6;
-`;
-
-const StyledCategory = styled.select`
-  background-color: #fffdf6;
-  border: 1px rgba(75, 84, 84, 0.6) solid;
-  font-size: 18px;
-  padding: 5px 5px 5px 10px;
-  margin-bottom: 20px;
-  font-family: sans-serif;
-  color: #4b5454;
 `;
 
 const StyledTextarea = styled.textarea`
@@ -192,20 +183,11 @@ function CreateForm({ onCreate, minusType, plusType }) {
         />
         <InputTitle>Kategorie:</InputTitle>
         {errors.category && <StyledError>{errors.category}</StyledError>}
-        <StyledCategory
-          type="select"
-          name="category"
-          placeholder="Bitte auswählen"
+        <DropdownCategory
           onChange={handleChange}
           value={listValues.category}
           error={errors.category}
-        >
-          <option value="">Bitte auswählen!</option>
-          <option value="Gehalt">Gehalt</option>
-          <option value="Bareinzahlung">Bareinzahlung</option>
-          <option value="Lebensmittel">Lebensmittel</option>
-          <option value="Kleidung">Kleidung</option>
-        </StyledCategory>
+        />
 
         <InputTitle>Betrag:</InputTitle>
         {errors.amount && <StyledError>{errors.amount}</StyledError>}
