@@ -11,8 +11,8 @@ const StyledCategory = styled.select`
   color: #4b5454;
 `;
 
-function DropdownCategory() {
-  const plusCategory = ["Gehalt", "Bareinzahlung", "Ersparnis", "hinzufügen"];
+function DropdownCategory({ minusType }) {
+  const plusCategory = ["Gehalt", "Bareinzahlung", "Ersparnis"];
   const minusCategory = [
     "Miete",
     "Nebenkosten",
@@ -22,17 +22,19 @@ function DropdownCategory() {
     "Weggehen",
     "Sport",
     "Urlaub",
-    "Sonstiges",
-    "hinzufügen"
+    "Sonstiges"
   ];
 
   return (
     <StyledCategory type="select" name="category" placeholder="Bitte auswählen">
       <option value="">Bitte auswählen!</option>
-      <option value="plusCategory">{plusCategory}</option>
-      <option value="minusCategory">{minusCategory}</option>
-      <option value="Bareinzahlung">Bareinzahlung</option>
-      <option value="Lebensmittel">Lebensmittel</option>
+      {plusCategory.map(item => (
+        <option>{item}</option>
+      ))}
+      {minusCategory.map(item => (
+        <option>{item}</option>
+      ))}
+      ;<option value="neu">... neue Kategorie hinzufügen</option>
     </StyledCategory>
   );
 }
