@@ -13,12 +13,7 @@ const StyledPlacedButtons = styled.div`
   padding: 0 15px 0 15px;
 `;
 
-function List({ transactions, setMinusType, setPlusType }) {
-  function handleClick(minusType, plusType) {
-    setMinusType(minusType);
-    setPlusType(plusType);
-  }
-
+function List({ transactions }) {
   function renderListItem(transaction) {
     return (
       <ListItem
@@ -37,11 +32,11 @@ function List({ transactions, setMinusType, setPlusType }) {
       {transactions && transactions.map(item => renderListItem(item))}
       <Saldo saldoTitle="Saldo" transactions={transactions} />
       <StyledPlacedButtons>
-        <Link to="/create">
-          <MinusButton buttonSize="M" onClick={() => handleClick("Ausgabe")} />
+        <Link to="/create/Ausgabe">
+          <MinusButton buttonSize="M" />
         </Link>
-        <Link to="/create">
-          <PlusButton buttonSize="M" onClick={() => handleClick("Einnahme")} />
+        <Link to="/create/Einnahme">
+          <PlusButton buttonSize="M" />
         </Link>
       </StyledPlacedButtons>
     </>
