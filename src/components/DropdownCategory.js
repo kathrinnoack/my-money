@@ -18,6 +18,7 @@ function DropdownCategory({ type, onChange, value }) {
     { type: "Einnahme", name: "Ersparnis" },
     { type: "Ausgabe", name: "Miete" },
     { type: "Ausgabe", name: "Nebenkosten" },
+    { type: "Ausgabe", name: "Lebensmittel" },
     { type: "Ausgabe", name: "Kleidung" },
     { type: "Ausgabe", name: "Versicherung" },
     { type: "Ausgabe", name: "Kosmetik & Hygieneartikel" },
