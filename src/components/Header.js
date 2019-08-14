@@ -8,10 +8,10 @@ const StyledHeader = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #4b5454;
-  padding: 5px;
+  padding: 10px 15px 10px 15px;
   z-index: 1;
 `;
 
@@ -22,8 +22,8 @@ const StyledHeadTitle = styled.h1`
 `;
 
 const StyledIcon = styled.img`
-  height: 65px;
-  width: 60px;
+  height: 60px;
+  width: 55px;
   margin-left: 25px;
 `;
 
@@ -34,6 +34,8 @@ function Header({ title, icon }) {
       <StyledIcon src="Icon.png" alt="Geldsack">
         {icon}
       </StyledIcon>
+
+      <StyledIcon src="stati_icon.png" alt="Statistik Icon" />
     </StyledHeader>
   );
 }
