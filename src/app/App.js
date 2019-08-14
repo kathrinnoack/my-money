@@ -7,6 +7,7 @@ import listData from "../pages/__mock__/list.json";
 
 import LandingPage from "../pages/LandingPage";
 import Dinero from "dinero.js";
+import StatisticPage from "../pages/StatisticPage";
 
 Dinero.defaultCurrency = "EUR";
 Dinero.globalLocale = "de-DE";
@@ -48,6 +49,7 @@ function App() {
             />
           )}
         />
+        <Route path="/statistic" excat component={StatisticPage} />
       </Switch>
     </Router>
   );
