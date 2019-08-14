@@ -13,8 +13,8 @@ Dinero.globalLocale = "de-DE";
 
 function App() {
   const [transactions, setTransactions] = React.useState(listData);
-  const [minusType, setMinusType] = React.useState("");
-  const [plusType, setPlusType] = React.useState("");
+  //const [minusCategory, setMinusCategory] = React.useState("");
+  //const [plusCategory, setPlusCategory] = React.useState("");
 
   function handleCreate(transaction) {
     const newTrans = transaction;
@@ -30,34 +30,21 @@ function App() {
           path="/"
           exact
           render={props => (
-            <LandingPage
-              setMinusType={setMinusType}
-              setPlusType={setPlusType}
-              {...props}
-              transactions={transactions}
-            />
+            <LandingPage {...props} transactions={transactions} />
           )}
         />
         <Route
           path="/list"
-          render={props => (
-            <List
-              {...props}
-              transactions={transactions}
-              setMinusType={setMinusType}
-              setPlusType={setPlusType}
-            />
-          )}
+          render={props => <List {...props} transactions={transactions} />}
         />
         } />
         <Route
-          path="/create"
+          path="/create/:type"
           render={props => (
             <Create
-              minusType={minusType}
-              plusType={plusType}
               {...props}
               onCreate={handleCreate}
+              transactions={transactions}
             />
           )}
         />

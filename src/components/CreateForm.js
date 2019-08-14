@@ -1,5 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import DropdownCategory from "./DropdownCategory";
+import {
+  StyledType,
+  StyledDate,
+  StyledAmount,
+  InputTitle
+} from "./StyledCreateForm";
 
 const Container = styled.form`
   position: relative;
@@ -9,69 +16,7 @@ const Container = styled.form`
   font-size: 26px;
 `;
 
-const StyledType = styled.input`
-  background-color: #fffdf6;
-  border: 1px rgba(75, 84, 84, 0.6) solid;
-  border-radius: 5px;
-  font-size: 22px;
-  margin-bottom: 20px;
-  padding: 5px 5px 5px 10px;
-  font-family: sans-serif;
-  color: #4b5454;
-  ::placeholder {
-    font-size: 18px;
-    color: rgba(75, 84, 84, 0.6);
-    padding: 5px 5px 5px 10px;
-  }
-`;
-
-const StyledDate = styled.input`
-  background-color: #fffdf6;
-  border: 1px rgba(75, 84, 84, 0.6) solid;
-  font-size: 18px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  padding: 5px 5px 5px 10px;
-  font-family: sans-serif;
-  color: #4b5454;
-`;
-const StyledAmount = styled.input`
-  background-color: #fffdf6;
-  border: 1px rgba(75, 84, 84, 0.6) solid;
-  font-size: 18px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  padding: 5px 5px 5px 10px;
-  ::placeholder {
-    font-size: 18px;
-    color: #4b5454;
-    opacity: 0.5;
-    padding: 5px 5px 5px 10px;
-  }
-`;
-
-const InputTitle = styled.span`
-  padding: 5px 5px 5px 10px;
-  font-size: 22px;
-  background-color: #4b5454;
-  border: none;
-  color: #fffcf2;
-  border-radius: 5px;
-  margin: 12px 0 12px 0;
-  opacity: 0.6;
-`;
-
-const StyledCategory = styled.select`
-  background-color: #fffdf6;
-  border: 1px rgba(75, 84, 84, 0.6) solid;
-  font-size: 18px;
-  padding: 5px 5px 5px 10px;
-  margin-bottom: 20px;
-  font-family: sans-serif;
-  color: #4b5454;
-`;
-
-const StyledTextarea = styled.textarea`
+export const StyledTextarea = styled.textarea`
   background-color: #fffdf6;
   border: 1px rgba(75, 84, 84, 0.6) solid;
   font-family: sans-serif;
@@ -86,7 +31,6 @@ const StyledTextarea = styled.textarea`
     padding-left: 10px;
   }
 `;
-
 const StyledSubmitButton = styled.button`
   justify-content: center;
   align-self: center;
@@ -109,7 +53,7 @@ const StyledError = styled.span`
   margin: 0;
 `;
 
-function CreateForm({ onCreate, minusType, plusType }) {
+function CreateForm({ onCreate, type, category }) {
   const [errors, setErrors] = React.useState({});
   const [listValues, setListValues] = React.useState({
     type: "",
@@ -121,6 +65,8 @@ function CreateForm({ onCreate, minusType, plusType }) {
 
   function handleChange(event) {
     const { name, value } = event.target;
+
+    console.log(name, value);
     setListValues({
       ...listValues,
       [name]: value
@@ -156,7 +102,7 @@ function CreateForm({ onCreate, minusType, plusType }) {
     }
 
     const transaction = {
-      type: listValues.type,
+      type,
       date: listValues.date,
       category: listValues.category,
       amount: listValues.amount,
@@ -164,7 +110,6 @@ function CreateForm({ onCreate, minusType, plusType }) {
     };
 
     onCreate(transaction);
-    //console.log(transaction);
   }
 
   return (
@@ -176,7 +121,7 @@ function CreateForm({ onCreate, minusType, plusType }) {
           type="text"
           name="type"
           placeholder="Einnahme oder Ausgabe"
-          value={minusType || plusType}
+          value={type}
           error={errors.type}
           onChange={handleChange}
         />
@@ -192,20 +137,12 @@ function CreateForm({ onCreate, minusType, plusType }) {
         />
         <InputTitle>Kategorie:</InputTitle>
         {errors.category && <StyledError>{errors.category}</StyledError>}
-        <StyledCategory
-          type="select"
-          name="category"
-          placeholder="Bitte auswählen"
+        <DropdownCategory
           onChange={handleChange}
-          value={listValues.category}
+          value={category}
+          type={type}
           error={errors.category}
-        >
-          <option value="">Bitte auswählen!</option>
-          <option value="Gehalt">Gehalt</option>
-          <option value="Bareinzahlung">Bareinzahlung</option>
-          <option value="Lebensmittel">Lebensmittel</option>
-          <option value="Kleidung">Kleidung</option>
-        </StyledCategory>
+        />
 
         <InputTitle>Betrag:</InputTitle>
         {errors.amount && <StyledError>{errors.amount}</StyledError>}

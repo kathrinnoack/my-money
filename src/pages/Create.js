@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import CreateForm from "../components/CreateForm";
 
-function Create({ plusType, minusType, onCreate, history }) {
+function Create({ onCreate, history, transactions, match }) {
   function handleCreate(transaction) {
     onCreate(transaction);
     history.push("/list");
@@ -12,9 +12,9 @@ function Create({ plusType, minusType, onCreate, history }) {
     <>
       <Header title="My Money" />
       <CreateForm
-        minusType={minusType}
-        plusType={plusType}
+        type={match.params.type}
         onCreate={handleCreate}
+        transactions={transactions}
       />
     </>
   );
