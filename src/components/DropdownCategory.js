@@ -21,7 +21,7 @@ function DropdownCategory({ type, onChange, value }) {
     { type: "Ausgabe", name: "Lebensmittel" },
     { type: "Ausgabe", name: "Kleidung" },
     { type: "Ausgabe", name: "Versicherung" },
-    { type: "Ausgabe", name: "Kosmetik & Hygieneartikel" },
+    { type: "Ausgabe", name: "Kosmetik & Hygiene" },
     { type: "Ausgabe", name: "Weggehen" },
     { type: "Ausgabe", name: "Sport" },
     { type: "Ausgabe", name: "Urlaub" },

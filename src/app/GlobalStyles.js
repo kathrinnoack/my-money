@@ -14,5 +14,6 @@ export default createGlobalStyle`
         font-family: sans-serif;
         background-color: #fffcf2;
         color: #4b5454;
+        font-size: 18px;
     }
 `;
