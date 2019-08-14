@@ -1,57 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 import DropdownCategory from "./DropdownCategory";
 import {
+  Container,
   StyledType,
   StyledDate,
   StyledAmount,
-  InputTitle
+  InputTitle,
+  StyledTextarea,
+  StyledSubmitButton,
+  StyledError
 } from "./StyledCreateForm";
-
-const Container = styled.form`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 35px 10px 10px 10px;
-  font-size: 26px;
-`;
-
-export const StyledTextarea = styled.textarea`
-  background-color: #fffdf6;
-  border: 1px rgba(75, 84, 84, 0.6) solid;
-  font-family: sans-serif;
-  font-size: 18px;
-  border-radius: 5px;
-  padding: 5px 5px 5px 10px;
-  margin-bottom: 20px;
-  ::placeholder {
-    font-size: 18px;
-    color: #4b5454;
-    opacity: 0.5;
-    padding-left: 10px;
-  }
-`;
-const StyledSubmitButton = styled.button`
-  justify-content: center;
-  align-self: center;
-  font-size: 22px;
-  width: 150px;
-  padding: 5px;
-  background-color: #4b5454;
-  color: #fffcf2;
-  border-radius: 25px;
-  border: none;
-`;
-
-const StyledError = styled.span`
-  font-size: 22px;
-  font-weight: bold;
-  background-color: rgba(219, 65, 65, 0.5);
-  color: rgba(219, 65, 65);
-  width: 100%;
-  padding-left: 10px;
-  margin: 0;
-`;
 
 function CreateForm({ onCreate, type, category }) {
   const [errors, setErrors] = React.useState({});
