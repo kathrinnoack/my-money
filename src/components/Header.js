@@ -27,22 +27,18 @@ const StyledIcon = styled.img`
   margin-left: 25px;
 `;
 
-function Header({ title, icon }) {
+function Header({ title }) {
   return (
     <StyledHeader>
       <StyledHeadTitle>{title}</StyledHeadTitle>
-      <StyledIcon src="Icon.png" alt="Geldsack">
-        {icon}
-      </StyledIcon>
-
+      <StyledIcon src="Icon.png" alt="Geldsack" />
       <StyledIcon src="stati_icon.png" alt="Statistik Icon" />
     </StyledHeader>
   );
 }
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.symbol
+  title: PropTypes.string.isRequired
 };
 
 export default Header;
