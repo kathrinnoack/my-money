@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledCheckboxMonth, StyledCheckboxCategory } from "./CheckboxMonth";
+import { StyledCheckboxMonth, StyledCheckboxCategory } from "./Checkbox";
 
 const StatisticHeadline = styled.h3`
   margin-left: 10px;
