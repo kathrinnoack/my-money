@@ -13,7 +13,7 @@ const StyledPlacedButtons = styled.div`
   padding: 0 15px 0 15px;
 `;
 
-function List({ transactions }) {
+function List({ transactions, history }) {
   function renderListItem(transaction) {
     return (
       <ListItem
@@ -25,10 +25,14 @@ function List({ transactions }) {
       />
     );
   }
-  console.log(transactions);
+
+  function handleStatistic() {
+    history.push("/statistic");
+  }
+
   return (
     <>
-      <Header title="My Money" />
+      <Header title="My Money" onClick={handleStatistic} />
       {transactions && transactions.map(item => renderListItem(item))}
       <Saldo saldoTitle="Saldo" transactions={transactions} />
       <StyledPlacedButtons>

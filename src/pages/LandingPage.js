@@ -26,10 +26,14 @@ const StyledPlusButton = styled(PlusButton)`
   bottom: 50px;
 `;
 
-function LandingPage({ transactions }) {
+function LandingPage({ transactions, history }) {
+  function handleStatistic() {
+    history.push("/statistic");
+  }
+
   return (
     <>
-      <Header title="My Money" />
+      <Header title="My Money" onClick={handleStatistic} />
       <Page>
         <Saldo
           title="Saldo"

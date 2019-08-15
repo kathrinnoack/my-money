@@ -8,9 +8,13 @@ function Create({ onCreate, history, transactions, match }) {
     history.push("/list");
   }
 
+  function handleStatistic() {
+    history.push("/statistic");
+  }
+
   return (
     <>
-      <Header title="My Money" />
+      <Header title="My Money" onClick={handleStatistic} />
       <CreateForm
         type={match.params.type}
         onCreate={handleCreate}

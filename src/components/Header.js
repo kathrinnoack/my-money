@@ -27,12 +27,12 @@ const StyledIcon = styled.img`
   margin-left: 25px;
 `;
 
-function Header({ title }) {
+function Header({ title, onClick }) {
   return (
     <StyledHeader>
       <StyledHeadTitle>{title}</StyledHeadTitle>
       <StyledIcon src="Icon.png" alt="Geldsack" />
-      <StyledIcon src="stati_icon.png" alt="Statistik Icon" />
+      <StyledIcon onClick={onClick} src="stati_icon.png" alt="Statistik Icon" />
     </StyledHeader>
   );
 }
