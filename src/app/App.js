@@ -4,18 +4,23 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import List from "../pages/List";
 import Create from "../pages/Create";
 import listData from "../pages/__mock__/list.json";
-
 import LandingPage from "../pages/LandingPage";
 import Dinero from "dinero.js";
 import StatisticPage from "../pages/StatisticPage";
+import { getFromLocal, setToLocal } from "../services";
 
 Dinero.defaultCurrency = "EUR";
 Dinero.globalLocale = "de-DE";
 
 function App() {
-  const [transactions, setTransactions] = React.useState(listData);
-  //const [minusCategory, setMinusCategory] = React.useState("");
-  //const [plusCategory, setPlusCategory] = React.useState("");
+  const [transactions, setTransactions] = React.useState(
+    listData,
+    getFromLocal("transactions") || []
+  );
+
+  React.useEffect(() => setToLocal("transactions", transactions), [
+    transactions
+  ]);
 
   function handleCreate(transaction) {
     const newTrans = transaction;
