@@ -54,7 +54,12 @@ function App() {
             />
           )}
         />
-        <Route path="/statistic" excat component={StatisticPage} />
+        <Route
+          path="/statistic"
+          render={props => (
+            <StatisticPage {...props} transactions={transactions} />
+          )}
+        />
       </Switch>
     </Router>
   );
