@@ -1,44 +1,50 @@
 [
   {
     "type": "Ausgabe",
-    "date": "15.07.2019",
+    "date": "2019-07-15",
     "description": "Edeka",
     "amount": "-12.50",
-    "category": "Lebensmittel"
+    "category": "Lebensmittel",
+    "month": "07"
   },
   {
     "type": "Einnahme",
-    "date": "01.07.2019",
+    "date": "2019-07-01",
     "description": "Urlaubsgeld",
     "amount": "+1000",
-    "category": "Einzahlung"
+    "category": "Einzahlung",
+    "month": "07"
   },
   {
     "type": "Ausgabe",
-    "date": "25.07.2019",
+    "date": "2019-07-25",
     "description": "Eintritt Freibad",
     "amount": "-4.50",
-    "category": "Sport"
+    "category": "Sport",
+    "month": "07"
   },
   {
     "type": "Einnahme",
-    "date": "28.06.2019",
+    "date": "2019-06-28",
     "description": "Gehalt",
     "amount": "1800",
-    "category": "Gehalt"
+    "category": "Gehalt",
+    "month": "06"
   },
   {
     "type": "Einnahme",
-    "date": "10.07.2019",
+    "date": "2019-07-10",
     "description": "Geschenk von Oma",
     "amount": "+100.00",
-    "category": "Bareinzahlung"
+    "category": "Bareinzahlung",
+    "month": "07"
   },
   {
     "type": "Ausgabe",
-    "date": "18.07.2019",
+    "date": "2019-07-18",
     "description": "Rewe",
     "amount": "-10.76",
-    "category": "Lebensmittel"
+    "category": "Lebensmittel",
+    "month": "07"
   }
 ]
