@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CheckboxMonth from "./Checkbox";
+import CheckboxMonth from "./CheckboxMonth";
 import CheckboxCategory from "./CheckboxCategory";
 
 const StatisticHeadline = styled.h3`
@@ -12,15 +12,19 @@ export const WhiteSpace = styled.div`
   height: 10px;
 `;
 
-function Statistic({ transactions }) {
+function Statistic({ transactions, handleMonth, handleCategory }) {
   console.log(transactions);
+
   return (
     <>
       <StatisticHeadline>Auswahl:</StatisticHeadline>
       <WhiteSpace />
-      <CheckboxMonth />
+      <CheckboxMonth handleMonth={handleMonth} transactions={transactions} />
       <WhiteSpace />
-      <CheckboxCategory />
+      <CheckboxCategory
+        handleCategory={handleCategory}
+        transactions={transactions}
+      />
     </>
   );
 }

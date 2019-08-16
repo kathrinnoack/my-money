@@ -9,7 +9,8 @@ const StyledCheckbox = styled.div`
   margin: 10px 10px 10px 10px;
 `;
 
-function CheckboxMonth({ handleMonth, month }) {
+function CheckboxMonth({ handleMonth, month, transactions }) {
+  console.log(transactions);
   return (
     <>
       <StyledCheckbox onChange={handleMonth} value={month}>

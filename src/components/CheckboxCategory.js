@@ -8,9 +8,9 @@ const StyledCheckbox = styled.div`
   margin: 10px 10px 10px 10px;
 `;
 
-function CheckboxCategory() {
+function CheckboxCategory({ handleCategory }) {
   return (
-    <StyledCheckbox>
+    <StyledCheckbox onChange={handleCategory}>
       <input type="checkbox" />
       <label for="Gehalt">Gehalt</label>
       <input type="checkbox" />
