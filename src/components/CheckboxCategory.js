@@ -5,7 +5,7 @@ const StyledCheckbox = styled.div`
   display: grid;
   grid-template-rows: 25px 25px 25px 25px 25px;
   grid-template-columns: 20px 3fr 20px 3fr 20px 3fr;
-  margin: 15px 10px 15px 10px;
+  margin: 10px 10px 10px 10px;
 `;
 
 function CheckboxCategory() {

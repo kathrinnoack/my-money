@@ -1,12 +1,18 @@
 import React from "react";
-import Statistic from "../components/Statistic";
+import Statistic, { WhiteSpace } from "../components/Statistic";
 import Header from "../components/Header";
+import CalculateSaldo from "../components/CalculateSaldo";
 
-function StatisticPage() {
+function StatisticPage({ transactions }) {
+  console.log(transactions);
+
   return (
     <>
       <Header title="My Money" />
-      <Statistic />
+      <Statistic transactions={transactions} />
+      <WhiteSpace />
+
+      <CalculateSaldo transactions={transactions} />
     </>
   );
 }

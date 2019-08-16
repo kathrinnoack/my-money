@@ -1,21 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import CalculateSaldo from "./CalculateSaldo";
+//import CalculateSaldo from "./CalculateSaldo";
 
 const StyledCheckbox = styled.div`
   display: grid;
-  grid-template-rows: 25px 25px 25px 25px 25px;
+  grid-template-rows: 25px 25px 25px 25px;
   grid-template-columns: 20px 3fr 20px 3fr 20px 3fr;
-  margin: 15px 10px 15px 10px;
+  margin: 10px 10px 10px 10px;
 `;
 
-function CheckboxMonth({ transactions }) {
+function CheckboxMonth() {
   /* const [selectMonth, setSelectMonth] = React.useState(false);
 
   function handleMonth(event) {
     setSelectMonth(event.target.value);
   }*/
-  console.log(transactions);
 
   return (
     <>
@@ -25,32 +24,55 @@ function CheckboxMonth({ transactions }) {
           /* checked={selectMonth === "01"}
   onChange={handleMonth}*/
         />
-        <label for="01">Januar</label>
+        <label for="01" value="01">
+          Januar
+        </label>
 
         <input type="checkbox" />
-        <label for="02">Februar</label>
+        <label for="02" value="02">
+          Februar
+        </label>
         <input type="checkbox" />
-        <label for="03">März</label>
+        <label for="03" value="03">
+          März
+        </label>
         <input type="checkbox" />
-        <label for="04">April</label>
+        <label for="04" value="04">
+          April
+        </label>
         <input type="checkbox" />
-        <label for="05">Mai</label>
+        <label for="05" value="05">
+          Mai
+        </label>
         <input type="checkbox" />
-        <label for="06">Juni</label>
+        <label for="06" value="06">
+          Juni
+        </label>
         <input type="checkbox" />
-        <label for="07">Juli</label>
+        <label for="07" value="07">
+          Juli
+        </label>
         <input type="checkbox" />
-        <label for="08">August</label>
+        <label for="08" value="08">
+          August
+        </label>
         <input type="checkbox" />
-        <label for="09">September</label>
+        <label for="09" value="09">
+          September
+        </label>
         <input type="checkbox" />
-        <label for="10">Oktober</label>
+        <label for="10" value="10">
+          Oktober
+        </label>
         <input type="checkbox" />
-        <label for="11">November</label>
+        <label for="11" value="11">
+          November
+        </label>
         <input type="checkbox" />
-        <label for="12">Dezember</label>
+        <label for="12" value="12">
+          Dezember
+        </label>
       </StyledCheckbox>
-      <CalculateSaldo transactions={transactions} />
     </>
   );
 }

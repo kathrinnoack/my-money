@@ -1,27 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledCheckboxMonth, StyledCheckboxCategory } from "./Checkbox";
+import CheckboxMonth from "./Checkbox";
+import CheckboxCategory from "./CheckboxCategory";
 
 const StatisticHeadline = styled.h3`
-  margin-left: 10px;
+  margin: 10px;
 `;
 
-const StyledOutput = styled.div`
-  margin: 25px 10px 15px 10px;
-  padding: 10px;
-  border: 2px solid #4b5454;
-  height: 80px;
+export const WhiteSpace = styled.div`
   width: 100%;
+  height: 10px;
 `;
 
-function Statistic() {
+function Statistic({ transactions }) {
+  console.log(transactions);
   return (
     <>
       <StatisticHeadline>Auswahl:</StatisticHeadline>
-      <StyledCheckboxMonth />
-      <StyledCheckboxCategory />
-
-      <StyledOutput>hier wird das Ergebnis angezeigt</StyledOutput>
+      <WhiteSpace />
+      <CheckboxMonth />
+      <WhiteSpace />
+      <CheckboxCategory />
     </>
   );
 }
