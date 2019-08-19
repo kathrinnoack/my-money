@@ -19,7 +19,11 @@ function Statistic({ transactions, handleMonth, handleCategory }) {
     <>
       <StatisticHeadline>Auswahl:</StatisticHeadline>
       <WhiteSpace />
-      <SelectMonth handleMonth={handleMonth} transactions={transactions} />
+      <SelectMonth
+        handleMonth={handleMonth}
+        transactions={transactions}
+        handleCategory={handleCategory}
+      />
       <WhiteSpace />
       <CheckboxCategory
         handleCategory={handleCategory}

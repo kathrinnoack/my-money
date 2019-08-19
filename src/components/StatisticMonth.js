@@ -2,19 +2,24 @@ import React from "react";
 import styled from "styled-components";
 import { InputTitle } from "./StyledCreateForm";
 
-const SelectMonth = styled.select`
+const StyledLayout = styled.div`
   display: flex;
-  margin: 10px 10px 10px 10px;
-  padding-left: 10px;
-  font-size: 18px;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 15px;
+`;
+
+const SelectMonth = styled.select`
+  margin: 15px;
+
   border: 1px rgba(75, 84, 84, 0.6) solid;
   color: #4b5454;
 `;
 
-function CheckboxMonth({ handleMonth, month, transactions }) {
+function CheckMonth({ handleMonth, month, transactions }) {
   console.log(transactions);
   return (
-    <>
+    <StyledLayout>
       <InputTitle>Monat</InputTitle>
       <SelectMonth
         onChange={handleMonth}
@@ -22,6 +27,7 @@ function CheckboxMonth({ handleMonth, month, transactions }) {
         name="month"
         type="select"
       >
+        <option value="">bitte auswählen</option>
         <option value="01">Januar</option>
         <option value="02">Februar</option>
         <option value="03">März</option>
@@ -35,8 +41,8 @@ function CheckboxMonth({ handleMonth, month, transactions }) {
         <option value="11">November</option>
         <option value="12">Dezember</option>
       </SelectMonth>
-    </>
+    </StyledLayout>
   );
 }
 
-export default CheckboxMonth;
+export default CheckMonth;

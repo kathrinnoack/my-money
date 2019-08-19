@@ -106,64 +106,64 @@
   {
     "type": "Ausgabe",
     "date": "2019-07-01",
-    "description": "Rewe",
-    "amount": "750.00",
+    "description": "für Wohnen",
+    "amount": "-750.00",
     "category": "Miete",
     "month": "07"
   },
   {
     "type": "Ausgabe",
     "date": "2019-06-01",
-    "description": "Rewe",
-    "amount": "750.00",
+    "description": "für Wohnen",
+    "amount": "-750.00",
     "category": "Miete",
     "month": "06"
   },
   {
     "type": "Ausgabe",
     "date": "2019-05-01",
-    "description": "Rewe",
-    "amount": "750.00",
+    "description": "für Wohnen",
+    "amount": "-750.00",
     "category": "Miete",
     "month": "05"
   },
   {
     "type": "Ausgabe",
     "date": "2019-04-01",
-    "description": "Rewe",
-    "amount": "750.00",
+    "description": "für Wohnen",
+    "amount": "-750.00",
     "category": "Miete",
     "month": "04"
   },
   {
     "type": "Ausgabe",
     "date": "2019-03-01",
-    "description": "Rewe",
-    "amount": "750.00",
+    "description": "für Wohnen",
+    "amount": "-750.00",
     "category": "Miete",
     "month": "03"
   },
   {
     "type": "Ausgabe",
     "date": "2019-02-01",
-    "description": "Rewe",
-    "amount": "750.00",
+    "description": "für Wohnen",
+    "amount": "-750.00",
     "category": "Miete",
     "month": "02"
   },
   {
     "type": "Ausgabe",
     "date": "2019-01-01",
-    "description": "Rewe",
-    "amount": "750.00",
+    "description": "für Wohnen",
+    "amount": "-750.00",
     "category": "Miete",
     "month": "01"
   },
   {
     "type": "Ausgabe",
     "date": "2019-08-01",
-    "description": "Rewe",
-    "amount": "750.00",
+    "description": "für Wohnen",
+    "amount": "-750.00",
     "category": "Miete",
     "month": "08"
   },
@@ -606,5 +606,213 @@
     "description": "Sportstudio",
     "type": "Ausgabe",
     "month": "06"
+  },
+  {
+    "date": "2019-03-01",
+    "category": " Sonstiges",
+    "amount": "-36.34",
+    "description": "dictum cursus.",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-06-19",
+    "category": " Sonstiges",
+    "amount": "-0.78",
+    "description": "vel arcu.",
+    "type": "Ausgabe",
+    "month": "06"
+  },
+  {
+    "date": "2019-04-13",
+    "category": " Weggehen ",
+    "amount": "-10.22",
+    "description": "lacus vestibulum",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-04-03",
+    "category": " Weggehen ",
+    "amount": "-26.23",
+    "description": "nec metus",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-03-23",
+    "category": " Sonstiges",
+    "amount": "-31.31",
+    "description": "facilisis vitae,",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-02-19",
+    "category": " Kosmetik & Hygiene ",
+    "amount": "-1.90",
+    "description": "Quisque ac",
+    "type": "Ausgabe",
+    "month": "02"
+  },
+  {
+    "date": "2019-06-21",
+    "category": " Sonstiges",
+    "amount": "-6.04",
+    "description": "accumsan sed,",
+    "type": "Ausgabe",
+    "month": "06"
+  },
+  {
+    "date": "2019-01-21",
+    "category": " Weggehen ",
+    "amount": "-32.97",
+    "description": "enim nec",
+    "type": "Ausgabe",
+    "month": "01"
+  },
+  {
+    "date": "2019-07-11",
+    "category": " Kosmetik & Hygiene ",
+    "amount": "-42.34",
+    "description": "dolor elit,",
+    "type": "Ausgabe",
+    "month": "07"
+  },
+  {
+    "date": "2019-04-09",
+    "category": " Weggehen ",
+    "amount": "-2.49",
+    "description": "Curae; Phasellus",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-05-24",
+    "category": " Kosmetik & Hygiene ",
+    "amount": "-8.93",
+    "description": "interdum feugiat.",
+    "type": "Ausgabe",
+    "month": "05"
+  },
+  {
+    "date": "2019-03-26",
+    "category": " Lebensmittel ",
+    "amount": "-43.72",
+    "description": "neque venenatis",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-03-18",
+    "category": " Kosmetik & Hygiene ",
+    "amount": "-39.55",
+    "description": "interdum enim",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-04-04",
+    "category": " Sonstiges",
+    "amount": "-14.90",
+    "description": "et magnis",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-04-01",
+    "category": " Lebensmittel ",
+    "amount": "-48.34",
+    "description": "metus facilisis",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-04-10",
+    "category": " Weggehen ",
+    "amount": "-14.74",
+    "description": "libero. Integer",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-07-02",
+    "category": " Weggehen ",
+    "amount": "-44.35",
+    "description": "fringilla ornare",
+    "type": "Ausgabe",
+    "month": "07"
+  },
+  {
+    "date": "2019-08-01",
+    "category": " Kosmetik & Hygiene ",
+    "amount": "-31.48",
+    "description": "velit eget",
+    "type": "Ausgabe",
+    "month": "08"
+  },
+  {
+    "date": "2019-04-07",
+    "category": " Weggehen ",
+    "amount": "-4.24",
+    "description": "lacus. Quisque",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-08-05",
+    "category": " Weggehen ",
+    "amount": "-2.39",
+    "description": "quam dignissim",
+    "type": "Ausgabe",
+    "month": "08"
+  },
+  {
+    "date": "2019-03-04",
+    "category": " Weggehen ",
+    "amount": "-7.80",
+    "description": "sapien molestie",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-07-01",
+    "category": " Sonstiges",
+    "amount": "-23.75",
+    "description": "nonummy ipsum",
+    "type": "Ausgabe",
+    "month": "07"
+  },
+  {
+    "date": "2019-01-24",
+    "category": " Sonstiges",
+    "amount": "-37.16",
+    "description": "Vestibulum ante",
+    "type": "Ausgabe",
+    "month": "01"
+  },
+  {
+    "date": "2019-04-12",
+    "category": " Weggehen ",
+    "amount": "-39.08",
+    "description": "dictum eu,",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-01-29",
+    "category": " Lebensmittel ",
+    "amount": "-24.34",
+    "description": "accumsan neque",
+    "type": "Ausgabe",
+    "month": "01"
+  },
+  {
+    "date": "2019-02-19",
+    "category": " Lebensmittel ",
+    "amount": "-6.48",
+    "description": "Integer vitae",
+    "type": "Ausgabe",
+    "month": "02"
   }
 ]
