@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CheckboxMonth from "./CheckboxMonth";
+import SelectMonth from "./StatisticMonth";
 import CheckboxCategory from "./CheckboxCategory";
 
 const StatisticHeadline = styled.h3`
@@ -19,7 +19,7 @@ function Statistic({ transactions, handleMonth, handleCategory }) {
     <>
       <StatisticHeadline>Auswahl:</StatisticHeadline>
       <WhiteSpace />
-      <CheckboxMonth handleMonth={handleMonth} transactions={transactions} />
+      <SelectMonth handleMonth={handleMonth} transactions={transactions} />
       <WhiteSpace />
       <CheckboxCategory
         handleCategory={handleCategory}

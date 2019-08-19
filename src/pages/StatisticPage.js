@@ -1,13 +1,19 @@
 import React from "react";
 import Statistic, { WhiteSpace } from "../components/Statistic";
 import Header from "../components/Header";
-import CalculateSaldo from "../components/CalculateSaldo";
 import styled from "styled-components";
 
 const Filtered = styled.div`
   margin: 10px;
   font-size: 22px;
+  display: grid;
+  height: auto;
+  grid-template-columns: 180px 1fr;
 `;
+
+const StyledCategory = styled.p``;
+
+const StyledAmount = styled.p``;
 
 function StatisticPage({ transactions }) {
   const [month, setMonth] = React.useState();
@@ -18,6 +24,7 @@ function StatisticPage({ transactions }) {
   function handleCategory(event) {
     const category = event.target.value;
   }
+
   function handleMonth(event) {
     const month = event.target.value;
 
@@ -42,10 +49,12 @@ function StatisticPage({ transactions }) {
       <Filtered>
         {filteredTransactions &&
           filteredTransactions.map(transaction => (
-            <div>
-              {transaction.category}
-              {transaction.amount}
-            </div>
+            <>
+              <StyledCategory>{transaction.category}</StyledCategory>
+              <StyledAmount>
+                {transaction.amount.replace(".", ",")}
+              </StyledAmount>
+            </>
           ))}
 
         {filteredMonth &&
