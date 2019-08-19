@@ -13,9 +13,10 @@ const SelectCategory = styled.select`
   margin: 15px;
   border: 1px rgba(75, 84, 84, 0.6) solid;
   color: #4b5454;
+  font-size: 18px;
 `;
 
-function CheckCategory({ handleCategory, transactions, category }) {
+function CheckCategory({ handleCategory }) {
   return (
     <StyledLayout>
       <InputTitle>Kategorie:</InputTitle>
