@@ -3,32 +3,29 @@ import Statistic, { WhiteSpace } from "../components/Statistic";
 import Header from "../components/Header";
 import styled from "styled-components";
 import Dinero from "dinero.js";
-
-const Filtered = styled.div`
-  margin: 10px;
-  font-size: 22px;
-  display: grid;
-  height: auto;
-  grid-template-columns: 180px 1fr;
-`;
+import { StyledSaldoTitle } from "../components/Saldo";
 
 const StyledFilteredSaldo = styled.div`
+  display: flex;
+  justify-content: space-between;
   margin: 10px;
   font-size: 22px;
 `;
-const StyledCategory = styled.p``;
 
-const StyledAmount = styled.p``;
+const Table = styled.table`
+  margin: 10px;
+  font-size: 22px;
+`;
 
 function StatisticPage({ transactions }) {
   const [month, setMonth] = React.useState();
-  const [category, setCategory] = React.useState();
+  /*const [category, setCategory] = React.useState();
 
   function handleCategory(event) {
     const category = event.target.value;
     setCategory(category);
     console.log(category);
-  }
+  }*/
 
   function handleMonth(event) {
     const month = event.target.value;
@@ -47,30 +44,27 @@ function StatisticPage({ transactions }) {
     .reduce((acc, curr) => {
       return acc.add(Dinero({ amount: curr }));
     }, Dinero({ amount: 0 }));
-  console.log(totalFilteredMonth);
 
   return (
     <>
       <Header title="My Money" />
-      <Statistic
-        transactions={transactions}
-        handleMonth={handleMonth}
-        handleCategory={handleCategory}
-      />
-      <WhiteSpace />
+      <Statistic transactions={transactions} handleMonth={handleMonth} />
       <WhiteSpace />
       <StyledFilteredSaldo>
+        <StyledSaldoTitle>Saldo</StyledSaldoTitle>
         <p>{totalFilteredMonth.toFormat("$0,0.00")}</p>
       </StyledFilteredSaldo>
-      <Filtered>
+      <div>
         {filteredTransactions &&
           filteredTransactions.map(transaction => (
-            <>
-              <StyledCategory>{transaction.category}</StyledCategory>
-              <StyledAmount>
-                {transaction.amount.replace(".", ",")}
-              </StyledAmount>
-            </>
+            <Table>
+              <tbody>
+                <tr>
+                  <td>{transaction.category}</td>
+                  <td> {transaction.amount.replace(".", ",")}</td>
+                </tr>
+              </tbody>
+            </Table>
           ))}
 
         {/*} {filteredMonth &&
@@ -79,7 +73,7 @@ function StatisticPage({ transactions }) {
               {item.category} {item.amount}
           </div>
           ))}*/}
-      </Filtered>
+      </div>
     </>
   );
 }
