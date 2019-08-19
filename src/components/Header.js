@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import logo from "../assets/Icon.png";
+import statistic from "../assets/stati_icon.png";
 
 const StyledHeader = styled.div`
   position: fixed;
@@ -31,8 +33,8 @@ function Header({ title, onClick }) {
   return (
     <StyledHeader>
       <StyledHeadTitle>{title}</StyledHeadTitle>
-      <StyledIcon src="Icon.png" alt="Geldsack" />
-      <StyledIcon onClick={onClick} src="stati_icon.png" alt="Statistik Icon" />
+      <StyledIcon src={logo} alt="Geldsack" />
+      <StyledIcon onClick={onClick} src={statistic} alt="Statistik Icon" />
     </StyledHeader>
   );
 }
