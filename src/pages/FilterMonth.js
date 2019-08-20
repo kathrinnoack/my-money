@@ -1,9 +1,11 @@
 import React from "react";
-import Statistic from "../components/Statistic";
+
 import Header from "../components/Header";
 import styled from "styled-components";
 import Dinero from "dinero.js";
 import { StyledSaldoTitle } from "../components/Saldo";
+import CheckMonth from "../components/StatisticMonth";
+import CheckCategory from "../components/StatisticCategory";
 
 const StyledFilteredSaldo = styled.div`
   display: flex;
@@ -15,6 +17,10 @@ const StyledFilteredSaldo = styled.div`
 const Table = styled.table`
   margin: 10px;
   font-size: 22px;
+`;
+
+const StatisticHeadline = styled.h3`
+  margin: 10px;
 `;
 
 function FilterMonth({ transactions, history }) {
@@ -73,7 +79,13 @@ function FilterMonth({ transactions, history }) {
         onClickHome={handleHome}
         onClick={handleStatistic}
       />
-      <Statistic
+      <StatisticHeadline>Auswahl:</StatisticHeadline>
+      <CheckMonth
+        transactions={transactions}
+        handleMonth={handleMonth}
+        handleCategory={handleCategory}
+      />
+      <CheckCategory
         transactions={transactions}
         handleMonth={handleMonth}
         handleCategory={handleCategory}

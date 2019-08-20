@@ -7,6 +7,7 @@ import listData from "../pages/__mock__/list.json";
 import LandingPage from "../pages/LandingPage";
 import Dinero from "dinero.js";
 import FilterMonth from "../pages/FilterMonth";
+import FilterCategory from "../pages/FilterCategory";
 import { getFromLocal, setToLocal } from "../services";
 import StatisticStart from "../pages/StatisticStart";
 
@@ -64,7 +65,7 @@ function App() {
         <Route
           path="/statistic/category"
           render={props => (
-            <FilterMonth {...props} transactions={transactions} />
+            <FilterCategory {...props} transactions={transactions} />
           )}
         />
         <Route path="/statistic" component={StatisticStart} />
