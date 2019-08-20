@@ -8,6 +8,7 @@ import LandingPage from "../pages/LandingPage";
 import Dinero from "dinero.js";
 import StatisticPage from "../pages/StatisticPage";
 import { getFromLocal, setToLocal } from "../services";
+import StatisticStart from "../pages/StatisticStart";
 
 Dinero.defaultCurrency = "EUR";
 Dinero.globalLocale = "de-DE";
@@ -54,8 +55,15 @@ function App() {
             />
           )}
         />
+        <Route path="/statistic" component={StatisticStart} />
         <Route
-          path="/statistic"
+          path="/statistic/month"
+          render={props => (
+            <StatisticPage {...props} transactions={transactions} />
+          )}
+        />
+        <Route
+          path="/statistic/category"
           render={props => (
             <StatisticPage {...props} transactions={transactions} />
           )}

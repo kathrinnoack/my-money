@@ -1,5 +1,5 @@
 import React from "react";
-import Statistic, { WhiteSpace } from "../components/Statistic";
+import Statistic from "../components/Statistic";
 import Header from "../components/Header";
 import styled from "styled-components";
 import Dinero from "dinero.js";
@@ -19,19 +19,30 @@ const Table = styled.table`
 
 function StatisticPage({ transactions }) {
   const [month, setMonth] = React.useState();
-  /*const [category, setCategory] = React.useState();
+  const [category, setCategory] = React.useState();
+  console.log(category);
 
   function handleCategory(event) {
     const category = event.target.value;
     setCategory(category);
-    console.log(category);
-  }*/
+  }
+
+  const filteredTransactionsCategory = transactions.filter(
+    item => item.category === category
+  );
+  console.log(filteredTransactionsCategory);
+
+  const totalFilteredCategory = filteredTransactionsCategory
+    .map(elem => parseInt(elem.amount * 100))
+    .reduce((acc, curr) => {
+      return acc.add(Dinero({ amount: curr }));
+    }, Dinero({ amonut: 0 }));
 
   function handleMonth(event) {
     const month = event.target.value;
     setMonth(month);
   }
-  const filteredTransactions = transactions.filter(
+  const filteredTransactionsMonth = transactions.filter(
     item => item.month === month
   );
 
@@ -39,24 +50,43 @@ function StatisticPage({ transactions }) {
     item => item.category === category
   );*/
 
-  const totalFilteredMonth = filteredTransactions
+  const totalFilteredMonth = filteredTransactionsMonth
     .map(elem => parseInt(elem.amount * 100))
-    .reduce((acc, curr) => {
-      return acc.add(Dinero({ amount: curr }));
-    }, Dinero({ amount: 0 }));
+    .reduce(
+      (acc, curr) => {
+        return acc.add(Dinero({ amount: curr }));
+      },
+      Dinero({
+        amount: 0
+      })
+    );
+
+  const groupedByCategory = filteredTransactionsMonth.reduce(
+    (allCategories, { category, amount }) => {
+      if (!allCategories[category]) allCategories[category] = [];
+      allCategories[category].push(amount);
+      return allCategories;
+    },
+    [{}]
+  );
+  console.log(groupedByCategory);
 
   return (
     <>
       <Header title="My Money" />
-      <Statistic transactions={transactions} handleMonth={handleMonth} />
-      <WhiteSpace />
+      <Statistic
+        transactions={transactions}
+        handleMonth={handleMonth}
+        handleCategory={handleCategory}
+      />
+
       <StyledFilteredSaldo>
         <StyledSaldoTitle>Saldo</StyledSaldoTitle>
         <p>{totalFilteredMonth.toFormat("$0,0.00")}</p>
       </StyledFilteredSaldo>
       <div>
-        {filteredTransactions &&
-          filteredTransactions.map(transaction => (
+        {filteredTransactionsMonth &&
+          filteredTransactionsMonth.map(transaction => (
             <Table>
               <tbody>
                 <tr>
@@ -74,6 +104,19 @@ function StatisticPage({ transactions }) {
           </div>
           ))}*/}
       </div>
+      <p>{totalFilteredCategory.toFormat("$0,0.00")}</p>
+      {filteredTransactionsCategory &&
+        filteredTransactionsCategory.map(transactions => (
+          <Table>
+            <tbody>
+              <tr>
+                <td>{transactions.description}</td>
+                <td>{transactions.amount.replace(".", ",")}</td>
+              </tr>
+            </tbody>
+          </Table>
+        ))}
+      <div />
     </>
   );
 }

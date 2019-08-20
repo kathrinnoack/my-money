@@ -82,6 +82,7 @@ export const StyledSubmitButton = styled.button`
   align-self: center;
   font-size: 22px;
   width: 150px;
+  margin: 10px;
   padding: 5px;
   background-color: #4b5454;
   color: #fffcf2;

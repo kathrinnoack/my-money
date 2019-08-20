@@ -590,5 +590,13 @@
     "description": "fürs Wohnen",
     "type": "Ausgabe",
     "month": "01"
+  },
+  {
+    "date": "2019-03-01",
+    "category": "Versicherung",
+    "amount": "-89.00",
+    "description": "ADAC Mitgliedschaft",
+    "type": "Ausgabe",
+    "month": "03"
   }
 ]
