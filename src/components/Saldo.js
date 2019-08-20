@@ -43,7 +43,7 @@ const StyledSaldo = styled.div`
   padding: 0 15px 0 15px;
 `;
 
-const StyledSaldoTitle = styled.p`
+export const StyledSaldoTitle = styled.p`
   display: flex;
   flex-direction: flex-start;
   color: ${props => getColor(props.color)};

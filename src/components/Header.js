@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import logo from "../assets/Icon.png";
+import statistic from "../assets/new_stati.png";
 
 const StyledHeader = styled.div`
   position: fixed;
@@ -27,22 +29,18 @@ const StyledIcon = styled.img`
   margin-left: 25px;
 `;
 
-function Header({ title, icon }) {
+function Header({ title, onClick, onClickHome }) {
   return (
     <StyledHeader>
-      <StyledHeadTitle>{title}</StyledHeadTitle>
-      <StyledIcon src="Icon.png" alt="Geldsack">
-        {icon}
-      </StyledIcon>
-
-      <StyledIcon src="stati_icon.png" alt="Statistik Icon" />
+      <StyledHeadTitle onClick={onClickHome}>{title}</StyledHeadTitle>
+      <StyledIcon src={logo} alt="Geldsack" />
+      <StyledIcon onClick={onClick} src={statistic} alt="Statistik Icon" />
     </StyledHeader>
   );
 }
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.symbol
+  title: PropTypes.string.isRequired
 };
 
 export default Header;

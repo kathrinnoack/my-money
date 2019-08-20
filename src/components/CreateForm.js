@@ -18,7 +18,8 @@ function CreateForm({ onCreate, type, category }) {
     date: "",
     description: "",
     amount: "",
-    category: ""
+    category: "",
+    month: ""
   });
 
   function handleChange(event) {
@@ -59,12 +60,15 @@ function CreateForm({ onCreate, type, category }) {
       return;
     }
 
+    const date = listValues.date;
+    const month = date.substring(5, 7);
     const transaction = {
       type,
       date: listValues.date,
       category: listValues.category,
       amount: listValues.amount,
-      description: listValues.description
+      description: listValues.description,
+      month
     };
 
     onCreate(transaction);

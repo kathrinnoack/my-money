@@ -6,8 +6,10 @@ import Create from "../pages/Create";
 import listData from "../pages/__mock__/list.json";
 import LandingPage from "../pages/LandingPage";
 import Dinero from "dinero.js";
-import StatisticPage from "../pages/StatisticPage";
+import FilterMonth from "../pages/FilterMonth";
+import FilterCategory from "../pages/FilterCategory";
 import { getFromLocal, setToLocal } from "../services";
+import StatisticStart from "../pages/StatisticStart";
 
 Dinero.defaultCurrency = "EUR";
 Dinero.globalLocale = "de-DE";
@@ -54,7 +56,19 @@ function App() {
             />
           )}
         />
-        <Route path="/statistic" excat component={StatisticPage} />
+        <Route
+          path="/statistic/month"
+          render={props => (
+            <FilterMonth {...props} transactions={transactions} />
+          )}
+        />
+        <Route
+          path="/statistic/category"
+          render={props => (
+            <FilterCategory {...props} transactions={transactions} />
+          )}
+        />
+        <Route path="/statistic" component={StatisticStart} />
       </Switch>
     </Router>
   );

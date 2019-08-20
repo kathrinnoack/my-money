@@ -51,7 +51,7 @@ export const StyledAmount = styled.input`
 `;
 
 export const InputTitle = styled.span`
-  padding: 5px 5px 5px 10px;
+  padding: 10px 10px 10px 10px;
   font-size: 22px;
   background-color: #4b5454;
   border: none;
@@ -82,6 +82,7 @@ export const StyledSubmitButton = styled.button`
   align-self: center;
   font-size: 22px;
   width: 150px;
+  margin: 10px;
   padding: 5px;
   background-color: #4b5454;
   color: #fffcf2;

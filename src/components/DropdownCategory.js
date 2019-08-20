@@ -11,7 +11,7 @@ const StyledCategory = styled.select`
   color: #4b5454;
 `;
 
-function DropdownCategory({ type, onChange, value }) {
+function DropdownCategory({ type, onChange }) {
   const categories = [
     { type: "Einnahme", name: "Gehalt" },
     { type: "Einnahme", name: "Bareinzahlung" },

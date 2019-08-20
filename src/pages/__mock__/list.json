@@ -1,44 +1,602 @@
 [
   {
     "type": "Ausgabe",
-    "date": "15.07.2019",
+    "date": "2019-07-15",
     "description": "Edeka",
     "amount": "-12.50",
-    "category": "Lebensmittel"
+    "category": "Lebensmittel",
+    "month": "07"
   },
   {
     "type": "Einnahme",
-    "date": "01.07.2019",
+    "date": "2019-07-01",
     "description": "Urlaubsgeld",
     "amount": "+1000",
-    "category": "Einzahlung"
+    "category": "Einzahlung",
+    "month": "07"
   },
   {
     "type": "Ausgabe",
-    "date": "25.07.2019",
+    "date": "2019-07-25",
     "description": "Eintritt Freibad",
     "amount": "-4.50",
-    "category": "Sport"
+    "category": "Sport",
+    "month": "07"
   },
   {
     "type": "Einnahme",
-    "date": "28.06.2019",
+    "date": "2019-06-28",
     "description": "Gehalt",
     "amount": "1800",
-    "category": "Gehalt"
+    "category": "Gehalt",
+    "month": "06"
   },
   {
     "type": "Einnahme",
-    "date": "10.07.2019",
+    "date": "2019-07-10",
     "description": "Geschenk von Oma",
     "amount": "+100.00",
-    "category": "Bareinzahlung"
+    "category": "Bareinzahlung",
+    "month": "07"
   },
   {
     "type": "Ausgabe",
-    "date": "18.07.2019",
+    "date": "2019-07-18",
     "description": "Rewe",
     "amount": "-10.76",
-    "category": "Lebensmittel"
+    "category": "Lebensmittel",
+    "month": "07"
+  },
+  {
+    "type": "Einnahme",
+    "date": "2019-05-28",
+    "description": "Gehalt",
+    "amount": "1800",
+    "category": "Gehalt",
+    "month": "05"
+  },
+  {
+    "type": "Einnahme",
+    "date": "2019-04-28",
+    "description": "Gehalt",
+    "amount": "1800",
+    "category": "Gehalt",
+    "month": "04"
+  },
+  {
+    "type": "Einnahme",
+    "date": "2019-03-28",
+    "description": "Gehalt",
+    "amount": "1800",
+    "category": "Gehalt",
+    "month": "03"
+  },
+  {
+    "type": "Einnahme",
+    "date": "2019-02-28",
+    "description": "Gehalt",
+    "amount": "1800",
+    "category": "Gehalt",
+    "month": "02"
+  },
+  {
+    "type": "Einnahme",
+    "date": "2019-01-28",
+    "description": "Gehalt",
+    "amount": "1800",
+    "category": "Gehalt",
+    "month": "01"
+  },
+  {
+    "type": "Einnahme",
+    "date": "2019-07-28",
+    "description": "Gehalt",
+    "amount": "1800",
+    "category": "Gehalt",
+    "month": "07"
+  },
+  {
+    "type": "Ausgabe",
+    "date": "2019-07-01",
+    "description": "für Wohnen",
+    "amount": "-750.00",
+    "category": "Miete",
+    "month": "07"
+  },
+  {
+    "type": "Ausgabe",
+    "date": "2019-06-01",
+    "description": "für Wohnen",
+    "amount": "-750.00",
+    "category": "Miete",
+    "month": "06"
+  },
+  {
+    "type": "Ausgabe",
+    "date": "2019-05-01",
+    "description": "für Wohnen",
+    "amount": "-750.00",
+    "category": "Miete",
+    "month": "05"
+  },
+  {
+    "type": "Ausgabe",
+    "date": "2019-04-01",
+    "description": "für Wohnen",
+    "amount": "-750.00",
+    "category": "Miete",
+    "month": "04"
+  },
+  {
+    "type": "Ausgabe",
+    "date": "2019-03-01",
+    "description": "für Wohnen",
+    "amount": "-750.00",
+    "category": "Miete",
+    "month": "03"
+  },
+  {
+    "date": "2019-08-07",
+    "category": "Sonstiges",
+    "amount": "-27.82",
+    "description": "et magnis",
+    "type": "Ausgabe",
+    "month": "08"
+  },
+  {
+    "date": "2019-05-30",
+    "category": "Sonstiges",
+    "amount": "-12.79",
+    "description": "dolor. Fusce",
+    "type": "Ausgabe",
+    "month": "05"
+  },
+  {
+    "date": "2019-02-13",
+    "category": "Weggehen",
+    "amount": "-37.95",
+    "description": "lacus. Quisque",
+    "type": "Ausgabe",
+    "month": "02"
+  },
+  {
+    "date": "2019-08-09",
+    "category": "Weggehen",
+    "amount": "-43.50",
+    "description": "egestas lacinia.",
+    "type": "Ausgabe",
+    "month": "08"
+  },
+  {
+    "date": "2019-07-13",
+    "category": "Weggehen",
+    "amount": "-6.53",
+    "description": "nisl. Nulla",
+    "type": "Ausgabe",
+    "month": "07"
+  },
+  {
+    "date": "2019-01-24",
+    "category": "Sonstiges",
+    "amount": "-37.16",
+    "description": "Vestibulum ante",
+    "type": "Ausgabe",
+    "month": "01"
+  },
+  {
+    "date": "2019-04-12",
+    "category": "Weggehen",
+    "amount": "-39.08",
+    "description": "dictum eu,",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-01-29",
+    "category": "Lebensmittel",
+    "amount": "-24.34",
+    "description": "accumsan neque",
+    "type": "Ausgabe",
+    "month": "01"
+  },
+  {
+    "date": "2019-02-19",
+    "category": "Lebensmittel",
+    "amount": "-6.48",
+    "description": "Integer vitae",
+    "type": "Ausgabe",
+    "month": "02"
+  },
+  {
+    "date": "2019-04-10",
+    "category": "Weggehen",
+    "amount": "-14.74",
+    "description": "libero. Integer",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-07-02",
+    "category": "Weggehen",
+    "amount": "-55.00",
+    "description": "fringilla ornare",
+    "type": "Ausgabe",
+    "month": "07"
+  },
+  {
+    "date": "2019-08-01",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-31.48",
+    "description": "velit eget",
+    "type": "Ausgabe",
+    "month": "08"
+  },
+  {
+    "date": "2019-04-07",
+    "category": "Weggehen",
+    "amount": "-4.24",
+    "description": "lacus. Quisque",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-08-05",
+    "category": "Weggehen",
+    "amount": "-2.39",
+    "description": "quam dignissim",
+    "type": "Ausgabe",
+    "month": "08"
+  },
+  {
+    "date": "2019-03-04",
+    "category": "Weggehen",
+    "amount": "-7.80",
+    "description": "sapien molestie",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-07-01",
+    "category": "Sonstiges",
+    "amount": "-23.75",
+    "description": "nonummy ipsum",
+    "type": "Ausgabe",
+    "month": "07"
+  },
+  {
+    "date": "2019-04-04",
+    "category": "Sonstiges",
+    "amount": "-14.90",
+    "description": "et magnis",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-04-01",
+    "category": "Lebensmittel",
+    "amount": "-48.34",
+    "description": "Feinkost Müller",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-07-11",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-42.34",
+    "description": "dolor elit,",
+    "type": "Ausgabe",
+    "month": "07"
+  },
+  {
+    "date": "2019-04-09",
+    "category": "Weggehen",
+    "amount": "-2.49",
+    "description": "Snack unterwegs",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-05-24",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-8.93",
+    "description": "Budni",
+    "type": "Ausgabe",
+    "month": "05"
+  },
+  {
+    "date": "2019-03-26",
+    "category": "Lebensmittel",
+    "amount": "-43.72",
+    "description": "Wochenmarkt",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-03-18",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-39.55",
+    "description": "Budni",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-02-19",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-1.90",
+    "description": "dm - Drogeriemarkt",
+    "type": "Ausgabe",
+    "month": "02"
+  },
+  {
+    "date": "2019-06-21",
+    "category": "Sonstiges",
+    "amount": "-6.04",
+    "description": "Briefumschläge",
+    "type": "Ausgabe",
+    "month": "06"
+  },
+  {
+    "date": "2019-01-21",
+    "category": "Weggehen",
+    "amount": "-32.97",
+    "description": "Steak Essen",
+    "type": "Ausgabe",
+    "month": "01"
+  },
+  {
+    "date": "2019-01-21",
+    "category": "Sport",
+    "amount": "-124.50",
+    "description": "Skipass 3 Tage",
+    "type": "Ausgabe",
+    "month": "01"
+  },
+  {
+    "date": "2019-03-20",
+    "category": "Urlaub",
+    "amount": "-202.90",
+    "description": "Hotel Gardasee",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-06-19",
+    "category": "Sonstiges",
+    "amount": "-0.78",
+    "description": "Sticker im Angebot",
+    "type": "Ausgabe",
+    "month": "06"
+  },
+  {
+    "date": "2019-04-13",
+    "category": "Weggehen",
+    "amount": "-10.22",
+    "description": "lacus vestibulum",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-04-03",
+    "category": "Weggehen",
+    "amount": "-26.23",
+    "description": "Brunch",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-03-23",
+    "category": "Sonstiges",
+    "amount": "-31.31",
+    "description": "facilisis vitae,",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-03-15",
+    "category": "Sport",
+    "amount": "-29.70",
+    "description": "Sportstudio",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-06-15",
+    "category": "Sport",
+    "amount": "-29.70",
+    "description": "Sportstudio",
+    "type": "Ausgabe",
+    "month": "06"
+  },
+  {
+    "date": "2019-03-01",
+    "category": "Sonstiges",
+    "amount": "-36.34",
+    "description": "dictum cursus",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-04-29",
+    "category": "Weggehen",
+    "amount": "-7.68",
+    "description": "Feierabend Bier",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-07-03",
+    "category": "Lebensmittel",
+    "amount": "-30.84",
+    "description": "Wochenmarkt",
+    "type": "Ausgabe",
+    "month": "07"
+  },
+  {
+    "date": "2019-06-12",
+    "category": "Weggehen",
+    "amount": "-15.52",
+    "description": "sodales. Mauris",
+    "type": "Ausgabe",
+    "month": "06"
+  },
+  {
+    "date": "2019-08-14",
+    "category": "Lebensmittel",
+    "amount": "-22.15",
+    "description": "Rewe",
+    "type": "Ausgabe",
+    "month": "08"
+  },
+  {
+    "date": "2019-04-09",
+    "category": "Weggehen",
+    "amount": "-27.34",
+    "description": "beim Asiaten",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-03-22",
+    "category": "Weggehen",
+    "amount": "-21.11",
+    "description": "Drinks abends",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-02-14",
+    "category": "Lebensmittel",
+    "amount": "-22.15",
+    "description": "Edeka",
+    "type": "Ausgabe",
+    "month": "02"
+  },
+  {
+    "date": "2019-02-22",
+    "category": "Lebensmittel",
+    "amount": "-48.51",
+    "description": "Rewe",
+    "type": "Ausgabe",
+    "month": "02"
+  },
+  {
+    "date": "2019-07-05",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-47.54",
+    "description": "Budni",
+    "type": "Ausgabe",
+    "month": "07"
+  },
+  {
+    "date": "2019-02-17",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-38.18",
+    "description": "scelerisque dui.",
+    "type": "Ausgabe",
+    "month": "02"
+  },
+  {
+    "date": "2019-08-19",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-15.49",
+    "description": "dm - Drogeriemarkt",
+    "type": "Ausgabe",
+    "month": "08"
+  },
+  {
+    "date": "2019-05-24",
+    "category": "Lebensmittel",
+    "amount": "-15.11",
+    "description": "Rewe",
+    "type": "Ausgabe",
+    "month": "05"
+  },
+  {
+    "date": "2019-07-06",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-65.00",
+    "description": "Friseur",
+    "type": "Ausgabe",
+    "month": "07"
+  },
+  {
+    "date": "2019-01-16",
+    "category": "Kleidung",
+    "amount": "-129.99",
+    "description": "neue Jacke",
+    "type": "Ausgabe",
+    "month": "01"
+  },
+  {
+    "date": "2019-05-24",
+    "category": "Lebensmittel",
+    "amount": "-34.66",
+    "description": "Feinkost Müller",
+    "type": "Ausgabe",
+    "month": "05"
+  },
+  {
+    "date": "2019-05-21",
+    "category": "Lebensmittel",
+    "amount": "-24.79",
+    "description": "Feinkost Müller",
+    "type": "Ausgabe",
+    "month": "05"
+  },
+  {
+    "date": "2019-04-28",
+    "category": "Sonstiges",
+    "amount": "-5.71",
+    "description": "HVV Ticket",
+    "type": "Ausgabe",
+    "month": "04"
+  },
+  {
+    "date": "2019-02-14",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-22.91",
+    "description": "dm - Drogeriemarkt",
+    "type": "Ausgabe",
+    "month": "02"
+  },
+  {
+    "date": "2019-03-01",
+    "category": "Kosmetik & Hygiene",
+    "amount": "-17.31",
+    "description": "Budni",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-02-22",
+    "category": "Kleidung",
+    "amount": "-69.99",
+    "description": "Jeans",
+    "type": "Ausgabe",
+    "month": "02"
+  },
+  {
+    "date": "2019-02-01",
+    "category": "Miete",
+    "amount": "-750.00",
+    "description": "fürs Wohnen",
+    "type": "Ausgabe",
+    "month": "02"
+  },
+  {
+    "date": "2019-01-01",
+    "category": "Miete",
+    "amount": "-750.00",
+    "description": "fürs Wohnen",
+    "type": "Ausgabe",
+    "month": "01"
+  },
+  {
+    "date": "2019-03-01",
+    "category": "Versicherung",
+    "amount": "-89.00",
+    "description": "ADAC Mitgliedschaft",
+    "type": "Ausgabe",
+    "month": "03"
   }
 ]
