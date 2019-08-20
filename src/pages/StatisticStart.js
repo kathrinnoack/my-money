@@ -27,10 +27,14 @@ const Whitespace = styled.div`
   height: 50px;
 `;
 
-function StatisticStart() {
+function StatisticStart({ history }) {
+  function handleHome() {
+    history.push("/");
+  }
+
   return (
     <StyledPage>
-      <Header title="My Money" />
+      <Header title="My Money" onClickHome={handleHome} />
       <Whitespace />
       <Text>Was möchtest du sehen?</Text>
       <Whitespace />

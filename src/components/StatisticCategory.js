@@ -16,11 +16,16 @@ const SelectCategory = styled.select`
   font-size: 18px;
 `;
 
-function CheckCategory({ handleCategory }) {
+function CheckCategory({ handleCategory, category }) {
   return (
     <StyledLayout>
       <InputTitle>Kategorie:</InputTitle>
-      <SelectCategory onChange={handleCategory} name="category" type="select">
+      <SelectCategory
+        onChange={handleCategory}
+        value={category}
+        name="category"
+        type="select"
+      >
         <option value="">bitte auswählen</option>
         <option value="Gehalt">Gehalt</option>
         <option value="Bareinzahlung">Bareinzahlung</option>

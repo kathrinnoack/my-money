@@ -8,16 +8,10 @@ const StatisticHeadline = styled.h3`
 `;
 
 function Statistic({ transactions, handleMonth, handleCategory }) {
-  console.log(transactions);
-
   return (
     <>
       <StatisticHeadline>Auswahl:</StatisticHeadline>
-      <SelectMonth
-        handleMonth={handleMonth}
-        transactions={transactions}
-        handleCategory={handleCategory}
-      />
+      <SelectMonth handleMonth={handleMonth} transactions={transactions} />
 
       <CheckCategory
         handleCategory={handleCategory}

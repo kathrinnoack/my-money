@@ -29,10 +29,10 @@ const StyledIcon = styled.img`
   margin-left: 25px;
 `;
 
-function Header({ title, onClick }) {
+function Header({ title, onClick, onClickHome }) {
   return (
     <StyledHeader>
-      <StyledHeadTitle>{title}</StyledHeadTitle>
+      <StyledHeadTitle onClick={onClickHome}>{title}</StyledHeadTitle>
       <StyledIcon src={logo} alt="Geldsack" />
       <StyledIcon onClick={onClick} src={statistic} alt="Statistik Icon" />
     </StyledHeader>

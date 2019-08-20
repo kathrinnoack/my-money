@@ -17,10 +17,14 @@ const Table = styled.table`
   font-size: 22px;
 `;
 
-function StatisticPage({ transactions }) {
+function StatisticPage({ transactions, history }) {
   const [month, setMonth] = React.useState();
   const [category, setCategory] = React.useState();
   console.log(category);
+
+  function handleHome() {
+    history.push("/");
+  }
 
   function handleCategory(event) {
     const category = event.target.value;
@@ -73,7 +77,7 @@ function StatisticPage({ transactions }) {
 
   return (
     <>
-      <Header title="My Money" />
+      <Header title="My Money" onClickHome={handleHome} />
       <Statistic
         transactions={transactions}
         handleMonth={handleMonth}

@@ -282,14 +282,7 @@
     "type": "Ausgabe",
     "month": "06"
   },
-  {
-    "date": "2019-02-22",
-    "category": " Kleidung ",
-    "amount": "-69.99",
-    "description": "Jeans",
-    "type": "Ausgabe",
-    "month": "02"
-  },
+
   {
     "date": "2019-02-01",
     "category": "Miete",

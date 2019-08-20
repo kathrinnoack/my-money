@@ -6,7 +6,7 @@ import Create from "../pages/Create";
 import listData from "../pages/__mock__/list.json";
 import LandingPage from "../pages/LandingPage";
 import Dinero from "dinero.js";
-import StatisticPage from "../pages/StatisticPage";
+import StatisticPage from "../pages/FilterPage";
 import { getFromLocal, setToLocal } from "../services";
 import StatisticStart from "../pages/StatisticStart";
 
@@ -55,7 +55,6 @@ function App() {
             />
           )}
         />
-        <Route path="/statistic" component={StatisticStart} />
         <Route
           path="/statistic/month"
           render={props => (
@@ -68,6 +67,7 @@ function App() {
             <StatisticPage {...props} transactions={transactions} />
           )}
         />
+        <Route path="/statistic" component={StatisticStart} />
       </Switch>
     </Router>
   );

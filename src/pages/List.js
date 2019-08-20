@@ -26,13 +26,21 @@ function List({ transactions, history }) {
     );
   }
 
+  function handleHome() {
+    history.push("/");
+  }
+
   function handleStatistic() {
     history.push("/statistic");
   }
 
   return (
     <>
-      <Header title="My Money" onClick={handleStatistic} />
+      <Header
+        title="My Money"
+        onClick={handleStatistic}
+        onClickHome={handleHome}
+      />
       {transactions && transactions.map(item => renderListItem(item))}
       <Saldo saldoTitle="Saldo" transactions={transactions} />
       <StyledPlacedButtons>
