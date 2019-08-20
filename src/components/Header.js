@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import logo from "../assets/Icon.png";
-import statistic from "../assets/stati_icon.png";
+import statistic from "../assets/new_stati.png";
 
 const StyledHeader = styled.div`
   position: fixed;
