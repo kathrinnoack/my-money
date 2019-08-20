@@ -7,16 +7,13 @@ const StatisticHeadline = styled.h3`
   margin: 10px;
 `;
 
-function Statistic({ transactions, handleMonth, handleCategory }) {
+function Statistic({ handleMonth, handleCategory }) {
   return (
     <>
       <StatisticHeadline>Auswahl:</StatisticHeadline>
-      <SelectMonth handleMonth={handleMonth} transactions={transactions} />
+      <SelectMonth handleMonth={handleMonth} />
 
-      <CheckCategory
-        handleCategory={handleCategory}
-        transactions={transactions}
-      />
+      <CheckCategory handleCategory={handleCategory} />
     </>
   );
 }

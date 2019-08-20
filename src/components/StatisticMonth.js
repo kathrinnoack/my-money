@@ -16,8 +16,7 @@ const SelectMonth = styled.select`
   color: #4b5454;
 `;
 
-function CheckMonth({ handleMonth, month, transactions }) {
-  console.log(transactions);
+function CheckMonth({ handleMonth, month }) {
   return (
     <StyledLayout>
       <InputTitle>Monat</InputTitle>
