@@ -12,6 +12,7 @@ const StyledLayout = styled.div`
 const SelectMonth = styled.select`
   margin: 15px;
   border: 1px rgba(75, 84, 84, 0.6) solid;
+  font-size: 18px;
   color: #4b5454;
 `;
 
