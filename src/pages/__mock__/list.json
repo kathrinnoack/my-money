@@ -275,7 +275,7 @@
     "date": "2019-04-01",
     "category": "Lebensmittel",
     "amount": "-48.34",
-    "description": "metus facilisis",
+    "description": "Feinkost Müller",
     "type": "Ausgabe",
     "month": "04"
   },
@@ -291,7 +291,7 @@
     "date": "2019-04-09",
     "category": "Weggehen",
     "amount": "-2.49",
-    "description": "Curae; Phasellus",
+    "description": "Snack unterwegs",
     "type": "Ausgabe",
     "month": "04"
   },
@@ -299,7 +299,7 @@
     "date": "2019-05-24",
     "category": "Kosmetik & Hygiene",
     "amount": "-8.93",
-    "description": "interdum feugiat.",
+    "description": "Budni",
     "type": "Ausgabe",
     "month": "05"
   },
@@ -307,7 +307,7 @@
     "date": "2019-03-26",
     "category": "Lebensmittel",
     "amount": "-43.72",
-    "description": "neque venenatis",
+    "description": "Wochenmarkt",
     "type": "Ausgabe",
     "month": "03"
   },
@@ -315,7 +315,7 @@
     "date": "2019-03-18",
     "category": "Kosmetik & Hygiene",
     "amount": "-39.55",
-    "description": "interdum enim",
+    "description": "Budni",
     "type": "Ausgabe",
     "month": "03"
   },
@@ -323,7 +323,7 @@
     "date": "2019-02-19",
     "category": "Kosmetik & Hygiene",
     "amount": "-1.90",
-    "description": "Quisque ac",
+    "description": "dm - Drogeriemarkt",
     "type": "Ausgabe",
     "month": "02"
   },
@@ -331,7 +331,7 @@
     "date": "2019-06-21",
     "category": "Sonstiges",
     "amount": "-6.04",
-    "description": "accumsan sed,",
+    "description": "Briefumschläge",
     "type": "Ausgabe",
     "month": "06"
   },
@@ -339,7 +339,7 @@
     "date": "2019-01-21",
     "category": "Weggehen",
     "amount": "-32.97",
-    "description": "enim nec",
+    "description": "Steak Essen",
     "type": "Ausgabe",
     "month": "01"
   },
@@ -363,7 +363,7 @@
     "date": "2019-06-19",
     "category": "Sonstiges",
     "amount": "-0.78",
-    "description": "vel arcu.",
+    "description": "Sticker im Angebot",
     "type": "Ausgabe",
     "month": "06"
   },
@@ -379,7 +379,7 @@
     "date": "2019-04-03",
     "category": "Weggehen",
     "amount": "-26.23",
-    "description": "nec metus",
+    "description": "Brunch",
     "type": "Ausgabe",
     "month": "04"
   },
@@ -411,7 +411,7 @@
     "date": "2019-03-01",
     "category": "Sonstiges",
     "amount": "-36.34",
-    "description": "dictum cursus.",
+    "description": "dictum cursus",
     "type": "Ausgabe",
     "month": "03"
   },
@@ -419,7 +419,7 @@
     "date": "2019-04-29",
     "category": "Weggehen",
     "amount": "-7.68",
-    "description": "erat eget",
+    "description": "Feierabend Bier",
     "type": "Ausgabe",
     "month": "04"
   },
@@ -427,7 +427,7 @@
     "date": "2019-07-03",
     "category": "Lebensmittel",
     "amount": "-30.84",
-    "description": "sapien molestie",
+    "description": "Wochenmarkt",
     "type": "Ausgabe",
     "month": "07"
   },
@@ -443,7 +443,7 @@
     "date": "2019-08-14",
     "category": "Lebensmittel",
     "amount": "-22.15",
-    "description": "Sed neque.",
+    "description": "Rewe",
     "type": "Ausgabe",
     "month": "08"
   },
@@ -451,7 +451,7 @@
     "date": "2019-04-09",
     "category": "Weggehen",
     "amount": "-27.34",
-    "description": "interdum ligula",
+    "description": "beim Asiaten",
     "type": "Ausgabe",
     "month": "04"
   },
@@ -459,7 +459,7 @@
     "date": "2019-03-22",
     "category": "Weggehen",
     "amount": "-21.11",
-    "description": "ac risus.",
+    "description": "Drinks abends",
     "type": "Ausgabe",
     "month": "03"
   },
@@ -483,7 +483,7 @@
     "date": "2019-07-05",
     "category": "Kosmetik & Hygiene",
     "amount": "-47.54",
-    "description": "at, iaculis",
+    "description": "Budni",
     "type": "Ausgabe",
     "month": "07"
   },
@@ -499,7 +499,7 @@
     "date": "2019-08-19",
     "category": "Kosmetik & Hygiene",
     "amount": "-15.49",
-    "description": "dolor sit",
+    "description": "dm - Drogeriemarkt",
     "type": "Ausgabe",
     "month": "08"
   },
@@ -507,15 +507,15 @@
     "date": "2019-05-24",
     "category": "Lebensmittel",
     "amount": "-15.11",
-    "description": "Sed auctor",
+    "description": "Rewe",
     "type": "Ausgabe",
     "month": "05"
   },
   {
     "date": "2019-07-06",
     "category": "Kosmetik & Hygiene",
-    "amount": "-35.83",
-    "description": "Phasellus vitae",
+    "amount": "-65.00",
+    "description": "Friseur",
     "type": "Ausgabe",
     "month": "07"
   },
@@ -531,7 +531,7 @@
     "date": "2019-05-24",
     "category": "Lebensmittel",
     "amount": "-34.66",
-    "description": "rFeinkost Müller",
+    "description": "Feinkost Müller",
     "type": "Ausgabe",
     "month": "05"
   },
@@ -539,7 +539,7 @@
     "date": "2019-05-21",
     "category": "Lebensmittel",
     "amount": "-24.79",
-    "description": "sociis natoque",
+    "description": "Feinkost Müller",
     "type": "Ausgabe",
     "month": "05"
   },
@@ -547,7 +547,7 @@
     "date": "2019-04-28",
     "category": "Sonstiges",
     "amount": "-5.71",
-    "description": "ornare placerat,",
+    "description": "HVV Ticket",
     "type": "Ausgabe",
     "month": "04"
   },
@@ -555,7 +555,7 @@
     "date": "2019-02-14",
     "category": "Kosmetik & Hygiene",
     "amount": "-22.91",
-    "description": "tincidunt. Donec",
+    "description": "dm - Drogeriemarkt",
     "type": "Ausgabe",
     "month": "02"
   },
@@ -563,7 +563,7 @@
     "date": "2019-03-01",
     "category": "Kosmetik & Hygiene",
     "amount": "-17.31",
-    "description": "scelerisque, lorem",
+    "description": "Budni",
     "type": "Ausgabe",
     "month": "03"
   },

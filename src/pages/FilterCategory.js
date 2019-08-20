@@ -1,9 +1,10 @@
 import React from "react";
-import Statistic from "../components/Statistic";
 import Header from "../components/Header";
 import styled from "styled-components";
 import Dinero from "dinero.js";
 import { StyledSaldoTitle } from "../components/Saldo";
+import CheckCategory from "../components/StatisticCategory";
+import CheckMonth from "../components/StatisticMonth";
 
 const StyledFilteredSaldo = styled.div`
   display: flex;
@@ -16,14 +17,20 @@ const Table = styled.table`
   margin: 10px;
   font-size: 22px;
 `;
+const StatisticHeadline = styled.h3`
+  margin: 10px;
+`;
 
 function StatisticPage({ transactions, history }) {
   const [month, setMonth] = React.useState();
   const [category, setCategory] = React.useState();
-  console.log(category);
 
   function handleHome() {
     history.push("/");
+  }
+
+  function handleStatistic() {
+    history.push("/statistic");
   }
 
   function handleCategory(event) {
@@ -31,31 +38,16 @@ function StatisticPage({ transactions, history }) {
     setCategory(category);
   }
 
-  const filteredTransactionsCategory = transactions.filter(
-    item => item.category === category
-  );
-  console.log(filteredTransactionsCategory);
-
-  const totalFilteredCategory = filteredTransactionsCategory
-    .map(elem => parseInt(elem.amount * 100))
-    .reduce((acc, curr) => {
-      return acc.add(Dinero({ amount: curr }));
-    }, Dinero({ amonut: 0 }));
-
   function handleMonth(event) {
     const month = event.target.value;
     setMonth(month);
   }
-  const filteredTransactionsMonth = transactions.filter(
-    item => item.month === month
-  );
 
-  const filteredMonth = filteredTransactionsMonth.filter(
-    item => item.category === category
-  );
-  console.log(filteredMonth);
+  const filteredTransactions = transactions
+    .filter(item => (category ? item.category === category : true))
+    .filter(item => (month ? item.month === month : true));
 
-  const totalFilteredMonth = filteredTransactionsMonth
+  const totalFilteredMonth = filteredTransactions
     .map(elem => parseInt(elem.amount * 100))
     .reduce(
       (acc, curr) => {
@@ -66,7 +58,7 @@ function StatisticPage({ transactions, history }) {
       })
     );
 
-  const groupedByCategory = filteredTransactionsMonth.reduce(
+  /* const groupedByCategory = filteredTransactionsMonth.reduce(
     (allCategories, { category, amount }) => {
       if (!allCategories[category]) allCategories[category] = [];
       allCategories[category].push(amount);
@@ -75,11 +67,21 @@ function StatisticPage({ transactions, history }) {
     [{}]
   );
   console.log(groupedByCategory);
-
+*/
   return (
     <>
-      <Header title="My Money" onClickHome={handleHome} />
-      <Statistic
+      <Header
+        title="My Money"
+        onClickHome={handleHome}
+        onClick={handleStatistic}
+      />
+      <StatisticHeadline>Auswahl:</StatisticHeadline>
+      <CheckCategory
+        transactions={transactions}
+        handleMonth={handleMonth}
+        handleCategory={handleCategory}
+      />
+      <CheckMonth
         transactions={transactions}
         handleMonth={handleMonth}
         handleCategory={handleCategory}
@@ -88,39 +90,20 @@ function StatisticPage({ transactions, history }) {
       <StyledFilteredSaldo>
         <StyledSaldoTitle>Saldo</StyledSaldoTitle>
         <p>{totalFilteredMonth.toFormat("$0,0.00")}</p>
-        {filteredMonth &&
-          filteredMonth.map(item => (
-            <div>
-              {item.category} {item.amount}
-            </div>
-          ))}
       </StyledFilteredSaldo>
       <div>
-        {filteredTransactionsMonth &&
-          filteredTransactionsMonth.map(transaction => (
+        {filteredTransactions &&
+          filteredTransactions.map(transaction => (
             <Table>
               <tbody>
                 <tr>
-                  <td>{transaction.category}</td>
+                  <td>{transaction.description}</td>
                   <td> {transaction.amount.replace(".", ",")}</td>
                 </tr>
               </tbody>
             </Table>
           ))}
       </div>
-      <p>{totalFilteredCategory.toFormat("$0,0.00")}</p>
-      {filteredTransactionsCategory &&
-        filteredTransactionsCategory.map(transactions => (
-          <Table>
-            <tbody>
-              <tr>
-                <td>{transactions.description}</td>
-                <td>{transactions.amount.replace(".", ",")}</td>
-              </tr>
-            </tbody>
-          </Table>
-        ))}
-      <div />
     </>
   );
 }
