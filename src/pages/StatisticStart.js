@@ -24,7 +24,7 @@ const Text = styled.div`
 `;
 
 const Whitespace = styled.div`
-  height: 50px;
+  height: 100px;
 `;
 
 function StatisticStart({ history }) {

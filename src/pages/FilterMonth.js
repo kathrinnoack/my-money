@@ -7,16 +7,17 @@ import { StyledSaldoTitle } from "../components/Saldo";
 import CheckMonth from "../components/StatisticMonth";
 import CheckCategory from "../components/StatisticCategory";
 
-const StyledFilteredSaldo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
-  font-size: 22px;
-`;
-
 const Table = styled.table`
   margin: 10px;
   font-size: 22px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  padding: 10px;
+  margin: 10px;
+  td:nth-child(2) {
+    padding: 10px;
+  }
 `;
 
 const StatisticHeadline = styled.h3`
@@ -90,11 +91,16 @@ function FilterMonth({ transactions, history }) {
         handleMonth={handleMonth}
         handleCategory={handleCategory}
       />
-
-      <StyledFilteredSaldo>
-        <StyledSaldoTitle>Saldo</StyledSaldoTitle>
-        <p>{totalFilteredMonth.toFormat("$0,0.00")}</p>
-      </StyledFilteredSaldo>
+      <Table>
+        <tbody>
+          <tr>
+            <td>
+              <StyledSaldoTitle>Saldo</StyledSaldoTitle>{" "}
+            </td>
+            <td>{totalFilteredMonth.toFormat("$0,0.00")}</td>
+          </tr>
+        </tbody>
+      </Table>
       <div>
         {filteredTransactions &&
           filteredTransactions.map(transaction => (

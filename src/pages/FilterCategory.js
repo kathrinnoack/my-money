@@ -6,16 +6,17 @@ import { StyledSaldoTitle } from "../components/Saldo";
 import CheckCategory from "../components/StatisticCategory";
 import CheckMonth from "../components/StatisticMonth";
 
-const StyledFilteredSaldo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
-  font-size: 22px;
-`;
-
 const Table = styled.table`
   margin: 10px;
   font-size: 22px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  padding: 10px;
+  margin: 10px;
+  td:nth-child(2) {
+    padding: 10px;
+  }
 `;
 const StatisticHeadline = styled.h3`
   margin: 10px;
@@ -87,23 +88,28 @@ function StatisticPage({ transactions, history }) {
         handleCategory={handleCategory}
       />
 
-      <StyledFilteredSaldo>
-        <StyledSaldoTitle>Saldo</StyledSaldoTitle>
-        <p>{totalFilteredMonth.toFormat("$0,0.00")}</p>
-      </StyledFilteredSaldo>
-      <div>
-        {filteredTransactions &&
-          filteredTransactions.map(transaction => (
-            <Table>
-              <tbody>
-                <tr>
-                  <td>{transaction.description}</td>
-                  <td> {transaction.amount.replace(".", ",")}</td>
-                </tr>
-              </tbody>
-            </Table>
-          ))}
-      </div>
+      <Table>
+        <tbody>
+          <tr>
+            <td>
+              <StyledSaldoTitle>Saldo</StyledSaldoTitle>
+            </td>
+            <td> {totalFilteredMonth.toFormat("$0,0.00")}</td>
+          </tr>
+        </tbody>
+      </Table>
+
+      {filteredTransactions &&
+        filteredTransactions.map(transaction => (
+          <Table>
+            <tbody>
+              <tr>
+                <td>{transaction.description}</td>
+                <td> {transaction.amount.replace(".", ",")}</td>
+              </tr>
+            </tbody>
+          </Table>
+        ))}
     </>
   );
 }
