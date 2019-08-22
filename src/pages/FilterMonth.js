@@ -1,24 +1,16 @@
 import React from "react";
-
 import Header from "../components/Header";
 import styled from "styled-components";
 import Dinero from "dinero.js";
 import { StyledSaldoTitle } from "../components/Saldo";
 import CheckMonth from "../components/StatisticMonth";
 import CheckCategory from "../components/StatisticCategory";
-
-const Table = styled.table`
-  margin: 10px;
-  font-size: 22px;
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  padding: 10px;
-  margin: 10px;
-  td:nth-child(2) {
-    padding: 10px;
-  }
-`;
+import {
+  Table,
+  StyledTableRow,
+  TableData,
+  TableDataAmount
+} from "../components/StyledTable";
 
 const StatisticHeadline = styled.h3`
   margin: 10px;
@@ -43,7 +35,7 @@ function FilterMonth({ transactions, history }) {
 
   function handleCategory(event) {
     const category = event.target.value;
-    console.log(category, "yeah");
+
     setCategory(category);
   }
 
@@ -91,14 +83,17 @@ function FilterMonth({ transactions, history }) {
         handleMonth={handleMonth}
         handleCategory={handleCategory}
       />
+
       <Table>
         <tbody>
-          <tr>
-            <td>
-              <StyledSaldoTitle>Saldo</StyledSaldoTitle>{" "}
-            </td>
-            <td>{totalFilteredMonth.toFormat("$0,0.00")}</td>
-          </tr>
+          <StyledTableRow>
+            <TableData>
+              <StyledSaldoTitle>Saldo</StyledSaldoTitle>
+            </TableData>
+            <TableDataAmount>
+              {totalFilteredMonth.toFormat("$0,0.00")}
+            </TableDataAmount>
+          </StyledTableRow>
         </tbody>
       </Table>
       <div>
@@ -106,10 +101,12 @@ function FilterMonth({ transactions, history }) {
           filteredTransactions.map(transaction => (
             <Table>
               <tbody>
-                <tr>
-                  <td>{transaction.category}</td>
-                  <td> {transaction.amount.replace(".", ",")}</td>
-                </tr>
+                <StyledTableRow>
+                  <TableData>{transaction.category}</TableData>
+                  <TableDataAmount>
+                    {transaction.amount.replace(".", ",")}
+                  </TableDataAmount>
+                </StyledTableRow>
               </tbody>
             </Table>
           ))}

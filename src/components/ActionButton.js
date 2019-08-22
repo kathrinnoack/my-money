@@ -30,7 +30,6 @@ const StyledMinusButton = styled.button`
   height: ${props => getSize(props.buttonSize).height};
   border-radius: 50%;
   margin: 10px;
-
   background-color: #db4141;
   color: #fffcf2;
   font-size: ${props => getSize(props.buttonSize).fontSize};
