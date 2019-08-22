@@ -14,7 +14,7 @@ import {
 function CreateForm({ onCreate, type, category }) {
   const [errors, setErrors] = React.useState({});
   const [listValues, setListValues] = React.useState({
-    type: "",
+    type,
     date: "",
     description: "",
     amount: "",
@@ -66,7 +66,10 @@ function CreateForm({ onCreate, type, category }) {
       type,
       date: listValues.date,
       category: listValues.category,
-      amount: listValues.amount,
+      amount:
+        listValues.type === "Ausgabe"
+          ? "-" + listValues.amount
+          : listValues.amount,
       description: listValues.description,
       month
     };

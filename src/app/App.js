@@ -26,7 +26,6 @@ function App() {
 
   function handleCreate(transaction) {
     const newTrans = transaction;
-    console.log(transaction);
     setTransactions([newTrans, ...transactions]);
   }
 

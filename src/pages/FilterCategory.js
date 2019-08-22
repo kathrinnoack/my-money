@@ -5,19 +5,13 @@ import Dinero from "dinero.js";
 import { StyledSaldoTitle } from "../components/Saldo";
 import CheckCategory from "../components/StatisticCategory";
 import CheckMonth from "../components/StatisticMonth";
+import {
+  Table,
+  StyledTableRow,
+  TableData,
+  TableDataAmount
+} from "../components/StyledTable";
 
-const Table = styled.table`
-  margin: 10px;
-  font-size: 22px;
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  padding: 10px;
-  margin: 10px;
-  td:nth-child(2) {
-    padding: 10px;
-  }
-`;
 const StatisticHeadline = styled.h3`
   margin: 10px;
 `;
@@ -46,6 +40,7 @@ function StatisticPage({ transactions, history }) {
 
   const filteredTransactions = transactions
     .filter(item => (category ? item.category === category : true))
+    .sort((a, b) => a.description.localeCompare(b.description))
     .filter(item => (month ? item.month === month : true));
 
   const totalFilteredMonth = filteredTransactions
@@ -59,16 +54,6 @@ function StatisticPage({ transactions, history }) {
       })
     );
 
-  /* const groupedByCategory = filteredTransactionsMonth.reduce(
-    (allCategories, { category, amount }) => {
-      if (!allCategories[category]) allCategories[category] = [];
-      allCategories[category].push(amount);
-      return allCategories;
-    },
-    [{}]
-  );
-  console.log(groupedByCategory);
-*/
   return (
     <>
       <Header
@@ -90,12 +75,14 @@ function StatisticPage({ transactions, history }) {
 
       <Table>
         <tbody>
-          <tr>
-            <td>
+          <StyledTableRow>
+            <TableData>
               <StyledSaldoTitle>Saldo</StyledSaldoTitle>
-            </td>
-            <td> {totalFilteredMonth.toFormat("$0,0.00")}</td>
-          </tr>
+            </TableData>
+            <TableDataAmount>
+              {totalFilteredMonth.toFormat("$0,0.00")}
+            </TableDataAmount>
+          </StyledTableRow>
         </tbody>
       </Table>
 
@@ -104,8 +91,10 @@ function StatisticPage({ transactions, history }) {
           <Table>
             <tbody>
               <tr>
-                <td>{transaction.description}</td>
-                <td> {transaction.amount.replace(".", ",")}</td>
+                <TableData>{transaction.description}</TableData>
+                <TableDataAmount>
+                  {transaction.amount.replace(".", ",") + " €"}
+                </TableDataAmount>
               </tr>
             </tbody>
           </Table>

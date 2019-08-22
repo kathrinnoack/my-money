@@ -7,7 +7,6 @@ function Create({ onCreate, history, transactions, match }) {
     onCreate(transaction);
     history.push("/list");
   }
-
   function handleHome() {
     history.push("/");
   }

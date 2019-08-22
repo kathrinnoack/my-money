@@ -42,7 +42,6 @@ function DropdownCategory({ type, onChange }) {
       {filteredCategories.map(item => (
         <option value={item.name}>{item.name}</option>
       ))}
-      {/* <option value="neu">... neue Kategorie hinzufügen</option> */}
     </StyledCategory>
   );
 }
