@@ -11,8 +11,8 @@
     "type": "Einnahme",
     "date": "2019-07-01",
     "description": "Urlaubsgeld",
-    "amount": "1000",
-    "category": "Einzahlung",
+    "amount": "500.00",
+    "category": "Bareinzahlung",
     "month": "07"
   },
   {
@@ -155,7 +155,7 @@
     "date": "2019-02-13",
     "category": "Weggehen",
     "amount": "-37.95",
-    "description": "lacus. Quisque",
+    "description": "Sushi for friends",
     "type": "Ausgabe",
     "month": "02"
   },
@@ -235,7 +235,7 @@
     "date": "2019-04-07",
     "category": "Weggehen",
     "amount": "-4.24",
-    "description": "lacus. Quisque",
+    "description": "Snacks",
     "type": "Ausgabe",
     "month": "04"
   },
@@ -371,7 +371,7 @@
     "date": "2019-04-13",
     "category": "Weggehen",
     "amount": "-10.22",
-    "description": "lacus vestibulum",
+    "description": "Drink",
     "type": "Ausgabe",
     "month": "04"
   },
@@ -596,6 +596,14 @@
     "category": "Versicherung",
     "amount": "-89.00",
     "description": "ADAC Mitgliedschaft",
+    "type": "Ausgabe",
+    "month": "03"
+  },
+  {
+    "date": "2019-03-22",
+    "category": "Kleidung",
+    "amount": "-89.00",
+    "description": "Pullover",
     "type": "Ausgabe",
     "month": "03"
   }

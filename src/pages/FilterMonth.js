@@ -105,7 +105,7 @@ function FilterMonth({ transactions, history }) {
                 <StyledTableRow>
                   <TableData>{transaction.category}</TableData>
                   <TableDataAmount>
-                    {transaction.amount.replace(".", ",")}
+                    {transaction.amount.replace(".", ",") + " €"}
                   </TableDataAmount>
                 </StyledTableRow>
               </tbody>

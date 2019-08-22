@@ -93,8 +93,7 @@ function StatisticPage({ transactions, history }) {
               <tr>
                 <TableData>{transaction.description}</TableData>
                 <TableDataAmount>
-                  {" "}
-                  {transaction.amount.replace(".", ",")}
+                  {transaction.amount.replace(".", ",") + " €"}
                 </TableDataAmount>
               </tr>
             </tbody>
