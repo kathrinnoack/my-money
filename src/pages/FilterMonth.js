@@ -41,7 +41,8 @@ function FilterMonth({ transactions, history }) {
 
   const filteredTransactions = transactions
     .filter(item => (month ? item.month === month : true))
-    .filter(item => (category ? item.category === category : true));
+    .filter(item => (category ? item.category === category : true))
+    .sort((a, b) => a.category.localeCompare(b.category));
 
   const totalFilteredMonth = filteredTransactions
     .map(elem => parseInt(elem.amount * 100))
@@ -54,7 +55,7 @@ function FilterMonth({ transactions, history }) {
       })
     );
 
-  /* const groupedByCategory = filteredTransactionsMonth.reduce(
+  /*const groupedByCategory = filteredTransactions.reduce(
     (allCategories, { category, amount }) => {
       if (!allCategories[category]) allCategories[category] = [];
       allCategories[category].push(amount);
@@ -63,7 +64,7 @@ function FilterMonth({ transactions, history }) {
     [{}]
   );
   console.log(groupedByCategory);
-*/
+  */
 
   return (
     <>
