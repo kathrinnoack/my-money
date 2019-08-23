@@ -11,7 +11,7 @@ import {
   StyledError
 } from "./StyledCreateForm";
 
-function CreateForm({ onCreate, type, category }) {
+function CreateForm({ onCreate, type, category, todayDate }) {
   const [errors, setErrors] = React.useState({});
   const [listValues, setListValues] = React.useState({
     type,
@@ -25,7 +25,6 @@ function CreateForm({ onCreate, type, category }) {
   function handleChange(event) {
     const { name, value } = event.target;
 
-    console.log(name, value);
     setListValues({
       ...listValues,
       [name]: value
@@ -64,7 +63,7 @@ function CreateForm({ onCreate, type, category }) {
     const month = date.substring(5, 7);
     const transaction = {
       type,
-      date: listValues.date,
+      date: todayDate,
       category: listValues.category,
       amount:
         listValues.type === "Ausgabe"

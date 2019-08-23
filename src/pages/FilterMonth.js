@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Dinero from "dinero.js";
 import { StyledSaldoTitle } from "../components/Saldo";
 import CheckMonth from "../components/StatisticMonth";
-import CheckCategory from "../components/StatisticCategory";
 import {
   Table,
   StyledTableRow,
@@ -55,16 +54,22 @@ function FilterMonth({ transactions, history }) {
       })
     );
 
-  /*const groupedByCategory = filteredTransactions.reduce(
+  const groupedByCategory = filteredTransactions.reduce(
     (allCategories, { category, amount }) => {
       if (!allCategories[category]) allCategories[category] = [];
-      allCategories[category].push(amount);
+      allCategories[category].push(Number(amount));
       return allCategories;
     },
-    [{}]
+    {}
   );
-  console.log(groupedByCategory);
-  */
+
+  const groupedCategoryAmount = Object.keys(groupedByCategory).map(key => {
+    return {
+      [key]: groupedByCategory[key].reduce((acc, zahl) => {
+        return acc + zahl;
+      }, 0)
+    };
+  });
 
   return (
     <>
@@ -79,12 +84,6 @@ function FilterMonth({ transactions, history }) {
         handleMonth={handleMonth}
         handleCategory={handleCategory}
       />
-      <CheckCategory
-        transactions={transactions}
-        handleMonth={handleMonth}
-        handleCategory={handleCategory}
-      />
-
       <Table>
         <tbody>
           <StyledTableRow>
@@ -98,14 +97,15 @@ function FilterMonth({ transactions, history }) {
         </tbody>
       </Table>
       <div>
-        {filteredTransactions &&
-          filteredTransactions.map(transaction => (
+        {groupedCategoryAmount &&
+          groupedCategoryAmount.map(elem => (
             <Table>
               <tbody>
                 <StyledTableRow>
-                  <TableData>{transaction.category}</TableData>
+                  <TableData>{Object.keys(elem)}</TableData>
                   <TableDataAmount>
-                    {transaction.amount.replace(".", ",") + " €"}
+                    {Math.round(elem[Object.keys(elem)] * 100) / 100}
+                    {" €"}
                   </TableDataAmount>
                 </StyledTableRow>
               </tbody>
