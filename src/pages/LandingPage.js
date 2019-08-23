@@ -17,13 +17,13 @@ const Page = styled.div`
 const StyledMinusButton = styled(MinusButton)`
   position: absolute;
   left: 30px;
-  bottom: 50px;
+  bottom: 20px;
 `;
 
 const StyledPlusButton = styled(PlusButton)`
   position: absolute;
   right: 30px;
-  bottom: 50px;
+  bottom: 20px;
 `;
 
 function LandingPage({ transactions, history }) {

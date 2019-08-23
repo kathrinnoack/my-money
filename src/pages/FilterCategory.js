@@ -40,8 +40,8 @@ function StatisticPage({ transactions, history }) {
 
   const filteredTransactions = transactions
     .filter(item => (category ? item.category === category : true))
-    .sort((a, b) => a.description.localeCompare(b.description))
-    .filter(item => (month ? item.month === month : true));
+    .filter(item => (month ? item.month === month : true))
+    .sort((a, b) => a.description.localeCompare(b.description));
 
   const totalFilteredMonth = filteredTransactions
     .map(elem => parseInt(elem.amount * 100))
@@ -53,6 +53,26 @@ function StatisticPage({ transactions, history }) {
         amount: 0
       })
     );
+
+  const groupedByDescription = filteredTransactions.reduce(
+    (allCategories, { description, amount }) => {
+      if (!allCategories[description]) allCategories[description] = [];
+      allCategories[description].push(Number(amount));
+      return allCategories;
+    },
+    {}
+  );
+  console.log(groupedByDescription);
+
+  const groupedDescriptionAmount = Object.keys(groupedByDescription).map(
+    key => {
+      return {
+        [key]: groupedByDescription[key].reduce((acc, curr) => {
+          return acc + curr;
+        }, 0)
+      };
+    }
+  );
 
   return (
     <>
@@ -86,14 +106,15 @@ function StatisticPage({ transactions, history }) {
         </tbody>
       </Table>
 
-      {filteredTransactions &&
-        filteredTransactions.map(transaction => (
+      {groupedDescriptionAmount &&
+        groupedDescriptionAmount.map(elem => (
           <Table>
             <tbody>
               <tr>
-                <TableData>{transaction.description}</TableData>
+                <TableData>{Object.keys(elem)}</TableData>
                 <TableDataAmount>
-                  {transaction.amount.replace(".", ",") + " €"}
+                  {Math.round(elem[Object.keys(elem)] * 100) / 100}
+                  {" €"}
                 </TableDataAmount>
               </tr>
             </tbody>

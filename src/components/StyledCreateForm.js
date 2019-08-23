@@ -51,6 +51,7 @@ export const StyledAmount = styled.input`
 `;
 
 export const InputTitle = styled.span`
+  flex-grow: 0.5;
   padding: 10px 10px 10px 10px;
   font-size: 22px;
   background-color: #4b5454;
