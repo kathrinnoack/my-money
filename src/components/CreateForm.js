@@ -1,5 +1,6 @@
 import React from "react";
 import DropdownCategory from "./DropdownCategory";
+import uuid from "uuid/v4";
 import {
   Container,
   StyledType,
@@ -14,6 +15,7 @@ import {
 function CreateForm({ onCreate, type, category, todayDate }) {
   const [errors, setErrors] = React.useState({});
   const [listValues, setListValues] = React.useState({
+    id: "",
     type,
     date: "",
     description: "",
@@ -63,14 +65,15 @@ function CreateForm({ onCreate, type, category, todayDate }) {
     const month = date.substring(5, 7);
     const transaction = {
       type,
-      date: todayDate,
+      date: listValues.date,
       category: listValues.category,
       amount:
         listValues.type === "Ausgabe"
           ? "-" + listValues.amount
           : listValues.amount,
       description: listValues.description,
-      month
+      month,
+      id: uuid()
     };
 
     onCreate(transaction);

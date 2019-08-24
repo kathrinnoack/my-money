@@ -5,7 +5,8 @@
     "description": "Edeka",
     "amount": "-12.50",
     "category": "Lebensmittel",
-    "month": "07"
+    "month": "07",
+    "id": "z3g19bga345"
   },
   {
     "type": "Einnahme",
@@ -13,7 +14,8 @@
     "description": "Urlaubsgeld",
     "amount": "500.00",
     "category": "Bareinzahlung",
-    "month": "07"
+    "month": "07",
+    "id": "q2l66o7p34"
   },
   {
     "type": "Ausgabe",
@@ -21,7 +23,8 @@
     "description": "Eintritt Freibad",
     "amount": "-4.50",
     "category": "Sport",
-    "month": "07"
+    "month": "07",
+    "id": "S12Qbfuertaog235"
   },
   {
     "type": "Einnahme",
@@ -29,7 +32,8 @@
     "description": "Gehalt",
     "amount": "1800",
     "category": "Gehalt",
-    "month": "06"
+    "month": "06",
+    "id": "1pmA560bg"
   },
   {
     "type": "Einnahme",
@@ -37,7 +41,8 @@
     "description": "Geschenk von Oma",
     "amount": "100.00",
     "category": "Bareinzahlung",
-    "month": "07"
+    "month": "07",
+    "id": "wqp064nh4d"
   },
   {
     "type": "Ausgabe",
@@ -45,7 +50,8 @@
     "description": "Rewe",
     "amount": "-10.76",
     "category": "Lebensmittel",
-    "month": "07"
+    "month": "07",
+    "id": "29hf592qS2"
   },
   {
     "type": "Einnahme",
@@ -53,7 +59,8 @@
     "description": "Gehalt",
     "amount": "1800",
     "category": "Gehalt",
-    "month": "05"
+    "month": "05",
+    "id": "jqp0nbc77c6"
   },
   {
     "type": "Einnahme",
@@ -61,7 +68,8 @@
     "description": "Gehalt",
     "amount": "1800",
     "category": "Gehalt",
-    "month": "04"
+    "month": "04",
+    "id": "234jimol"
   },
   {
     "type": "Einnahme",
@@ -69,7 +77,8 @@
     "description": "Gehalt",
     "amount": "1800",
     "category": "Gehalt",
-    "month": "03"
+    "month": "03",
+    "id": "lnM1Aq0"
   },
   {
     "type": "Einnahme",
@@ -77,7 +86,8 @@
     "description": "Gehalt",
     "amount": "1800",
     "category": "Gehalt",
-    "month": "02"
+    "month": "02",
+    "id": "3opq2hb7qwbgshz"
   },
   {
     "type": "Einnahme",
@@ -85,7 +95,8 @@
     "description": "Gehalt",
     "amount": "1800",
     "category": "Gehalt",
-    "month": "01"
+    "month": "01",
+    "id": "g23Ha0oo2345zU"
   },
   {
     "type": "Einnahme",
@@ -93,7 +104,8 @@
     "description": "Gehalt",
     "amount": "1800",
     "category": "Gehalt",
-    "month": "07"
+    "month": "07",
+    "id": "qlzs8d9"
   },
   {
     "type": "Ausgabe",
@@ -101,7 +113,8 @@
     "description": "für Wohnen",
     "amount": "-750.00",
     "category": "Miete",
-    "month": "07"
+    "month": "07",
+    "id": "M2395267bsrztakfXX"
   },
   {
     "type": "Ausgabe",
@@ -109,7 +122,8 @@
     "description": "für Wohnen",
     "amount": "-750.00",
     "category": "Miete",
-    "month": "06"
+    "month": "06",
+    "id": "mie06AUS123"
   },
   {
     "type": "Ausgabe",
@@ -117,7 +131,8 @@
     "description": "für Wohnen",
     "amount": "-750.00",
     "category": "Miete",
-    "month": "05"
+    "month": "05",
+    "id": "3hwq9uefsbvzur"
   },
   {
     "type": "Ausgabe",
@@ -125,7 +140,8 @@
     "description": "für Wohnen",
     "amount": "-750.00",
     "category": "Miete",
-    "month": "04"
+    "month": "04",
+    "id": "12pamnq4782"
   },
   {
     "type": "Ausgabe",
@@ -133,7 +149,8 @@
     "description": "für Wohnen",
     "amount": "-750.00",
     "category": "Miete",
-    "month": "03"
+    "month": "03",
+    "id": "4oplqw4hgb"
   },
   {
     "date": "2019-08-07",
@@ -141,7 +158,8 @@
     "amount": "-27.82",
     "description": "et magnis",
     "type": "Ausgabe",
-    "month": "08"
+    "month": "08",
+    "id": "49okwq7634wg"
   },
   {
     "date": "2019-05-30",
@@ -149,7 +167,8 @@
     "amount": "-12.79",
     "description": "dolor. Fusce",
     "type": "Ausgabe",
-    "month": "05"
+    "month": "05",
+    "id": "47jw0pl26"
   },
   {
     "date": "2019-02-13",
@@ -157,7 +176,8 @@
     "amount": "-37.95",
     "description": "Sushi for friends",
     "type": "Ausgabe",
-    "month": "02"
+    "month": "02",
+    "id": "5w0lq6g17rq"
   },
   {
     "date": "2019-08-09",
@@ -165,7 +185,8 @@
     "amount": "-43.50",
     "description": "egestas lacinia.",
     "type": "Ausgabe",
-    "month": "08"
+    "month": "08",
+    "id": "12hu34fw54qw"
   },
   {
     "date": "2019-07-13",
@@ -173,7 +194,8 @@
     "amount": "-6.53",
     "description": "nisl. Nulla",
     "type": "Ausgabe",
-    "month": "07"
+    "month": "07",
+    "id": "125hg00oo12Pq12"
   },
   {
     "date": "2019-01-24",
@@ -181,7 +203,8 @@
     "amount": "-37.16",
     "description": "Vestibulum ante",
     "type": "Ausgabe",
-    "month": "01"
+    "month": "01",
+    "id": "ue37gr00abrzg2397"
   },
   {
     "date": "2019-04-12",
@@ -189,7 +212,8 @@
     "amount": "-39.08",
     "description": "dictum eu,",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "6ev66lo66man"
   },
   {
     "date": "2019-01-29",
@@ -197,7 +221,8 @@
     "amount": "-24.34",
     "description": "accumsan neque",
     "type": "Ausgabe",
-    "month": "01"
+    "month": "01",
+    "id": "pg39jhwnanana2234"
   },
   {
     "date": "2019-02-19",
@@ -205,7 +230,8 @@
     "amount": "-6.48",
     "description": "Integer vitae",
     "type": "Ausgabe",
-    "month": "02"
+    "month": "02",
+    "id": "2kgk45jvcuzg7grkw"
   },
   {
     "date": "2019-04-10",
@@ -213,7 +239,8 @@
     "amount": "-14.74",
     "description": "libero. Integer",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "q2ru5bw0vka5vz1rwglg"
   },
   {
     "date": "2019-07-02",
@@ -221,7 +248,8 @@
     "amount": "-55.00",
     "description": "fringilla ornare",
     "type": "Ausgabe",
-    "month": "07"
+    "month": "07",
+    "id": "1f5t7u4l9x57"
   },
   {
     "date": "2019-08-01",
@@ -229,7 +257,8 @@
     "amount": "-31.48",
     "description": "velit eget",
     "type": "Ausgabe",
-    "month": "08"
+    "month": "08",
+    "id": "pM864FGT23"
   },
   {
     "date": "2019-04-07",
@@ -237,7 +266,8 @@
     "amount": "-4.24",
     "description": "Snacks",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "wkq59ghb1093r"
   },
   {
     "date": "2019-08-05",
@@ -245,7 +275,8 @@
     "amount": "-2.39",
     "description": "quam dignissim",
     "type": "Ausgabe",
-    "month": "08"
+    "month": "08",
+    "id": "16589hfjsg7bvuszt763qrgua"
   },
   {
     "date": "2019-03-04",
@@ -253,7 +284,8 @@
     "amount": "-7.80",
     "description": "sapien molestie",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "klw1340tbshjfgi"
   },
   {
     "date": "2019-07-01",
@@ -261,7 +293,8 @@
     "amount": "-23.75",
     "description": "nonummy ipsum",
     "type": "Ausgabe",
-    "month": "07"
+    "month": "07",
+    "id": "woq237bgha"
   },
   {
     "date": "2019-04-04",
@@ -269,7 +302,8 @@
     "amount": "-14.90",
     "description": "et magnis",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "23gWQ120Bl0"
   },
   {
     "date": "2019-04-01",
@@ -277,7 +311,8 @@
     "amount": "-48.34",
     "description": "Feinkost Müller",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "wq07jgei345"
   },
   {
     "date": "2019-07-11",
@@ -285,7 +320,8 @@
     "amount": "-42.34",
     "description": "dolor elit,",
     "type": "Ausgabe",
-    "month": "07"
+    "month": "07",
+    "id": "i86gt0plaq"
   },
   {
     "date": "2019-04-09",
@@ -293,7 +329,8 @@
     "amount": "-2.49",
     "description": "Snack unterwegs",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "7wq9brsa7"
   },
   {
     "date": "2019-05-24",
@@ -301,7 +338,8 @@
     "amount": "-8.93",
     "description": "Budni",
     "type": "Ausgabe",
-    "month": "05"
+    "month": "05",
+    "id": "05mai23htqwp"
   },
   {
     "date": "2019-03-26",
@@ -309,7 +347,8 @@
     "amount": "-43.72",
     "description": "Wochenmarkt",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "qp7rgz34t"
   },
   {
     "date": "2019-03-18",
@@ -317,7 +356,8 @@
     "amount": "-39.55",
     "description": "Budni",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "jkl061qualo"
   },
   {
     "date": "2019-02-19",
@@ -325,7 +365,8 @@
     "amount": "-1.90",
     "description": "dm - Drogeriemarkt",
     "type": "Ausgabe",
-    "month": "02"
+    "month": "02",
+    "id": "ql91zGsrTT01"
   },
   {
     "date": "2019-06-21",
@@ -333,7 +374,8 @@
     "amount": "-6.04",
     "description": "Briefumschläge",
     "type": "Ausgabe",
-    "month": "06"
+    "month": "06",
+    "id": "95hsr59"
   },
   {
     "date": "2019-01-21",
@@ -341,7 +383,8 @@
     "amount": "-32.97",
     "description": "Steak Essen",
     "type": "Ausgabe",
-    "month": "01"
+    "month": "01",
+    "id": "0q8q6q7q123"
   },
   {
     "date": "2019-01-21",
@@ -349,7 +392,8 @@
     "amount": "-124.50",
     "description": "Skipass 3 Tage",
     "type": "Ausgabe",
-    "month": "01"
+    "month": "01",
+    "id": "01waerf49z"
   },
   {
     "date": "2019-03-20",
@@ -357,7 +401,8 @@
     "amount": "-202.90",
     "description": "Hotel Gardasee",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "77zrafb4692"
   },
   {
     "date": "2019-06-19",
@@ -365,7 +410,8 @@
     "amount": "-0.78",
     "description": "Sticker im Angebot",
     "type": "Ausgabe",
-    "month": "06"
+    "month": "06",
+    "id": "8wq01hflks23"
   },
   {
     "date": "2019-04-13",
@@ -373,7 +419,8 @@
     "amount": "-10.22",
     "description": "Drink",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "2fomn09yx"
   },
   {
     "date": "2019-04-03",
@@ -381,7 +428,8 @@
     "amount": "-26.23",
     "description": "Brunch",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "9grq234qw"
   },
   {
     "date": "2019-03-23",
@@ -389,7 +437,8 @@
     "amount": "-31.31",
     "description": "facilisis vitae,",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "olf89ff4ff"
   },
   {
     "date": "2019-03-15",
@@ -397,7 +446,8 @@
     "amount": "-29.70",
     "description": "Sportstudio",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "1234567890axwyq"
   },
   {
     "date": "2019-06-15",
@@ -405,7 +455,8 @@
     "amount": "-29.70",
     "description": "Sportstudio",
     "type": "Ausgabe",
-    "month": "06"
+    "month": "06",
+    "id": "06wak09zu12"
   },
   {
     "date": "2019-03-01",
@@ -413,7 +464,8 @@
     "amount": "-36.34",
     "description": "dictum cursus",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "che3409gav"
   },
   {
     "date": "2019-04-29",
@@ -421,7 +473,8 @@
     "amount": "-7.68",
     "description": "Feierabend Bier",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "1j2v4l7ht"
   },
   {
     "date": "2019-07-03",
@@ -429,7 +482,8 @@
     "amount": "-30.84",
     "description": "Wochenmarkt",
     "type": "Ausgabe",
-    "month": "07"
+    "month": "07",
+    "id": "0za34bfgt"
   },
   {
     "date": "2019-06-12",
@@ -437,7 +491,8 @@
     "amount": "-15.52",
     "description": "sodales. Mauris",
     "type": "Ausgabe",
-    "month": "06"
+    "month": "06",
+    "id": "mu2346zyx"
   },
   {
     "date": "2019-08-14",
@@ -445,7 +500,8 @@
     "amount": "-22.15",
     "description": "Rewe",
     "type": "Ausgabe",
-    "month": "08"
+    "month": "08",
+    "id": "4grumpf0974"
   },
   {
     "date": "2019-04-09",
@@ -453,7 +509,8 @@
     "amount": "-27.34",
     "description": "beim Asiaten",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "3blab70muah"
   },
   {
     "date": "2019-03-22",
@@ -461,7 +518,8 @@
     "amount": "-21.11",
     "description": "Drinks abends",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "3harghel510"
   },
   {
     "date": "2019-02-14",
@@ -469,7 +527,8 @@
     "amount": "-22.15",
     "description": "Edeka",
     "type": "Ausgabe",
-    "month": "02"
+    "month": "02",
+    "id": "2gurt0178"
   },
   {
     "date": "2019-02-22",
@@ -477,7 +536,8 @@
     "amount": "-48.51",
     "description": "Rewe",
     "type": "Ausgabe",
-    "month": "02"
+    "month": "02",
+    "id": "5hagglo712"
   },
   {
     "date": "2019-07-05",
@@ -485,7 +545,8 @@
     "amount": "-47.54",
     "description": "Budni",
     "type": "Ausgabe",
-    "month": "07"
+    "month": "07",
+    "id": "45hello23"
   },
   {
     "date": "2019-02-17",
@@ -493,7 +554,8 @@
     "amount": "-38.18",
     "description": "scelerisque dui.",
     "type": "Ausgabe",
-    "month": "02"
+    "month": "02",
+    "id": "4haha347"
   },
   {
     "date": "2019-08-19",
@@ -501,7 +563,8 @@
     "amount": "-15.49",
     "description": "dm - Drogeriemarkt",
     "type": "Ausgabe",
-    "month": "08"
+    "month": "08",
+    "id": "3gwez567"
   },
   {
     "date": "2019-05-24",
@@ -509,7 +572,8 @@
     "amount": "-15.11",
     "description": "Rewe",
     "type": "Ausgabe",
-    "month": "05"
+    "month": "05",
+    "id": "2goal345"
   },
   {
     "date": "2019-07-06",
@@ -517,7 +581,8 @@
     "amount": "-65.00",
     "description": "Friseur",
     "type": "Ausgabe",
-    "month": "07"
+    "month": "07",
+    "id": "7865geht123"
   },
   {
     "date": "2019-01-16",
@@ -525,7 +590,8 @@
     "amount": "-129.99",
     "description": "neue Jacke",
     "type": "Ausgabe",
-    "month": "01"
+    "month": "01",
+    "id": "00wan45zu"
   },
   {
     "date": "2019-05-24",
@@ -533,7 +599,8 @@
     "amount": "-34.66",
     "description": "Feinkost Müller",
     "type": "Ausgabe",
-    "month": "05"
+    "month": "05",
+    "id": "abc567efg"
   },
   {
     "date": "2019-05-21",
@@ -541,7 +608,8 @@
     "amount": "-24.79",
     "description": "Feinkost Müller",
     "type": "Ausgabe",
-    "month": "05"
+    "month": "05",
+    "id": "12345no67"
   },
   {
     "date": "2019-04-28",
@@ -549,7 +617,8 @@
     "amount": "-5.71",
     "description": "HVV Ticket",
     "type": "Ausgabe",
-    "month": "04"
+    "month": "04",
+    "id": "wer345wann"
   },
   {
     "date": "2019-02-14",
@@ -557,7 +626,8 @@
     "amount": "-22.91",
     "description": "dm - Drogeriemarkt",
     "type": "Ausgabe",
-    "month": "02"
+    "month": "02",
+    "id": "56jaman23"
   },
   {
     "date": "2019-03-01",
@@ -565,7 +635,8 @@
     "amount": "-17.31",
     "description": "Budni",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "tzo456lsd"
   },
   {
     "date": "2019-02-22",
@@ -573,7 +644,8 @@
     "amount": "-69.99",
     "description": "Jeans",
     "type": "Ausgabe",
-    "month": "02"
+    "month": "02",
+    "id": "mond123mond"
   },
   {
     "date": "2019-02-01",
@@ -581,7 +653,8 @@
     "amount": "-750.00",
     "description": "fürs Wohnen",
     "type": "Ausgabe",
-    "month": "02"
+    "month": "02",
+    "id": "09iklo67"
   },
   {
     "date": "2019-01-01",
@@ -589,7 +662,8 @@
     "amount": "-750.00",
     "description": "fürs Wohnen",
     "type": "Ausgabe",
-    "month": "01"
+    "month": "01",
+    "id": "123456komnn"
   },
   {
     "date": "2019-03-01",
@@ -597,7 +671,8 @@
     "amount": "-89.00",
     "description": "ADAC Mitgliedschaft",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "234gko"
   },
   {
     "date": "2019-03-22",
@@ -605,6 +680,7 @@
     "amount": "-89.00",
     "description": "Pullover",
     "type": "Ausgabe",
-    "month": "03"
+    "month": "03",
+    "id": "123ghzjvk"
   }
 ]

@@ -13,19 +13,19 @@ const StyledCategory = styled.select`
 
 function DropdownCategory({ type, onChange }) {
   const categories = [
-    { type: "Einnahme", name: "Gehalt" },
-    { type: "Einnahme", name: "Bareinzahlung" },
-    { type: "Einnahme", name: "Ersparnis" },
-    { type: "Ausgabe", name: "Miete" },
-    { type: "Ausgabe", name: "Nebenkosten" },
-    { type: "Ausgabe", name: "Lebensmittel" },
-    { type: "Ausgabe", name: "Kleidung" },
-    { type: "Ausgabe", name: "Versicherung" },
-    { type: "Ausgabe", name: "Kosmetik & Hygiene" },
-    { type: "Ausgabe", name: "Weggehen" },
-    { type: "Ausgabe", name: "Sport" },
-    { type: "Ausgabe", name: "Urlaub" },
-    { type: "Ausgabe", name: "Sonstiges" }
+    { id: "01", type: "Einnahme", name: "Gehalt" },
+    { id: "02", type: "Einnahme", name: "Bareinzahlung" },
+    { id: "03", type: "Einnahme", name: "Ersparnis" },
+    { id: "04", type: "Ausgabe", name: "Miete" },
+    { id: "05", type: "Ausgabe", name: "Nebenkosten" },
+    { id: "06", type: "Ausgabe", name: "Lebensmittel" },
+    { id: "07", type: "Ausgabe", name: "Kleidung" },
+    { id: "08", type: "Ausgabe", name: "Versicherung" },
+    { id: "09", type: "Ausgabe", name: "Kosmetik & Hygiene" },
+    { id: "10", type: "Ausgabe", name: "Weggehen" },
+    { id: "11", type: "Ausgabe", name: "Sport" },
+    { id: "12", type: "Ausgabe", name: "Urlaub" },
+    { id: "13", type: "Ausgabe", name: "Sonstiges" }
   ];
 
   const filteredCategories = categories.filter(
@@ -40,7 +40,9 @@ function DropdownCategory({ type, onChange }) {
     <StyledCategory type="select" name="category" onChange={handleChange}>
       <option value="">Bitte auswählen!</option>
       {filteredCategories.map(item => (
-        <option value={item.name}>{item.name}</option>
+        <option key={item.id} value={item.name}>
+          {item.name}
+        </option>
       ))}
     </StyledCategory>
   );

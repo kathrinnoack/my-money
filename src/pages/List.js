@@ -17,6 +17,7 @@ function List({ transactions, history }) {
   function renderListItem(transaction) {
     return (
       <ListItem
+        key={transaction.id}
         type={transaction.type}
         date={transaction.date}
         description={transaction.description}
@@ -25,6 +26,7 @@ function List({ transactions, history }) {
       />
     );
   }
+  console.log(transactions);
 
   function handleHome() {
     history.push("/");
