@@ -61,7 +61,7 @@ function ListItem({ date, amount, description, category }) {
 
 ListItem.propTypes = {
   description: PropTypes.string,
-  tag: PropTypes.string
+  category: PropTypes.string
 };
 
 export default ListItem;

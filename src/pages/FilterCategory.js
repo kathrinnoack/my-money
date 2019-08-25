@@ -111,8 +111,8 @@ function StatisticPage({ transactions, history }) {
           <Table>
             <tbody>
               <tr>
-                <TableData>{Object.keys(elem)}</TableData>
-                <TableDataAmount>
+                <TableData key={elem.id}>{Object.keys(elem)}</TableData>
+                <TableDataAmount key={elem.id}>
                   {Math.round(elem[Object.keys(elem)] * 100) / 100}
                   {" €"}
                 </TableDataAmount>
