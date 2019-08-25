@@ -9,7 +9,7 @@ Install all dependencies with `npm init` and `npm install`
 
 ## Start
 
-<p>The project can be started with `npm start` on your localhost. <br>
+The project can be started with `npm start` on your localhost. <br>
 You can start the server with `npm run server` via your terminal.<br>
 This project also uses a styleguide through docz. You can start it with `npm run docz:dev`.
 
