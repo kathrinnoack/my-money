@@ -7,7 +7,7 @@ Clone the project and set it up in your local environment
 Check all dependencies in package.json
 Install all dependencies with `npm init` and `npm install`
 
-# Start
+## Start
 
 The project can be started with `npm start` on your localhost.
 You can start the server with `npm run server` via your terminal.
