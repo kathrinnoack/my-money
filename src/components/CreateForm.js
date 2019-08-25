@@ -12,7 +12,7 @@ import {
   StyledError
 } from "./StyledCreateForm";
 
-function CreateForm({ onCreate, type, category, todayDate }) {
+function CreateForm({ onCreate, type, category }) {
   const [errors, setErrors] = React.useState({});
   const [listValues, setListValues] = React.useState({
     id: "",
