@@ -16,7 +16,7 @@ const StatisticHeadline = styled.h3`
   margin: 10px;
 `;
 
-function StatisticPage({ transactions, history }) {
+function StatisticPage({ transactions, history, key }) {
   const [month, setMonth] = React.useState();
   const [category, setCategory] = React.useState();
 
@@ -56,22 +56,11 @@ function StatisticPage({ transactions, history }) {
 
   const groupedByDescription = filteredTransactions.reduce(
     (allCategories, { description, amount }) => {
-      if (!allCategories[description]) allCategories[description] = [];
-      allCategories[description].push(Number(amount));
+      if (!allCategories[description]) allCategories[description] = 0;
+      allCategories[description] = allCategories[description] + Number(amount);
       return allCategories;
     },
     {}
-  );
-  console.log(groupedByDescription);
-
-  const groupedDescriptionAmount = Object.keys(groupedByDescription).map(
-    key => {
-      return {
-        [key]: groupedByDescription[key].reduce((acc, curr) => {
-          return acc + curr;
-        }, 0)
-      };
-    }
   );
 
   return (
@@ -106,14 +95,14 @@ function StatisticPage({ transactions, history }) {
         </tbody>
       </Table>
 
-      {groupedDescriptionAmount &&
-        groupedDescriptionAmount.map(elem => (
-          <Table>
+      {groupedByDescription &&
+        Object.keys(groupedByDescription).map(key => (
+          <Table key={key}>
             <tbody>
               <tr>
-                <TableData key={elem.id}>{Object.keys(elem)}</TableData>
-                <TableDataAmount key={elem.id}>
-                  {Math.round(elem[Object.keys(elem)] * 100) / 100}
+                <TableData>{key}</TableData>
+                <TableDataAmount>
+                  {Math.round(groupedByDescription[key] * 100) / 100}
                   {" €"}
                 </TableDataAmount>
               </tr>

@@ -56,20 +56,12 @@ function FilterMonth({ transactions, history }) {
 
   const groupedByCategory = filteredTransactions.reduce(
     (allCategories, { category, amount }) => {
-      if (!allCategories[category]) allCategories[category] = [];
-      allCategories[category].push(Number(amount));
+      if (!allCategories[category]) allCategories[category] = 0;
+      allCategories[category] = allCategories[category] + Number(amount);
       return allCategories;
     },
     {}
   );
-
-  const groupedCategoryAmount = Object.keys(groupedByCategory).map(key => {
-    return {
-      [key]: groupedByCategory[key].reduce((acc, zahl) => {
-        return acc + zahl;
-      }, 0)
-    };
-  });
 
   return (
     <>
@@ -97,14 +89,14 @@ function FilterMonth({ transactions, history }) {
         </tbody>
       </Table>
       <div>
-        {groupedCategoryAmount &&
-          groupedCategoryAmount.map(elem => (
-            <Table>
+        {groupedByCategory &&
+          Object.keys(groupedByCategory).map(key => (
+            <Table key={key}>
               <tbody>
                 <StyledTableRow>
-                  <TableData key={elem.id}>{Object.keys(elem)}</TableData>
-                  <TableDataAmount key={elem.id}>
-                    {Math.round(elem[Object.keys(elem)] * 100) / 100}
+                  <TableData>{key}</TableData>
+                  <TableDataAmount>
+                    {Math.round(groupedByCategory[key] * 100) / 100}
                     {" €"}
                   </TableDataAmount>
                 </StyledTableRow>
