@@ -26,7 +26,6 @@ function List({ transactions, history }) {
       />
     );
   }
-  console.log(transactions);
 
   function handleHome() {
     history.push("/");
